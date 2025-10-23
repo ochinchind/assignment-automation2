@@ -1,0 +1,28 @@
+TC 1
+Sign Up
+1. Open browser
+2. Click Sign Up button
+3. Fill in user details
+4. Submit form
+
+TC 2
+Login
+1. Open broswer
+2. Click Log In button
+3. Enter username and password
+4. Submit form
+
+TC 3
+Logout
+1. Open browser
+2. Log in to account
+3. Click Logout button
+
+TC 4
+Add to cart
+1. Open browser
+2. Log in to account
+3. Browse products
+4. Select product
+5. Click Add to Cart button
+
