@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.14.0 on darwin)" generated="2025-11-16T22:45:17.627852" rpa="false" schemaversion="5">
+<suite id="s1" name="testCases" source="/Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/testCases">
+<suite id="s1-s1" name="Test" source="/Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/testCases/test.robot">
+<test id="s1-s1-t1" name="TC1_SIGN_UP_TEST" line="11">
+<kw name="Sign Up" owner="resources">
+<kw name="Open Test Browser" owner="resources">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:17.715448" level="INFO">${ENV_BS} = True</msg>
+<var>${ENV_BS}</var>
+<arg>BROWSERSTACK</arg>
+<arg>default=${BROWSERSTACK}</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:17.715353" elapsed="0.000112"/>
+</kw>
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:17.715594" level="INFO">${ENV_BROWSER} = Chrome</msg>
+<var>${ENV_BROWSER}</var>
+<arg>BROWSER</arg>
+<arg>default=${BROWSER}</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:17.715520" elapsed="0.000086"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Set BrowserStack Remote And Open" owner="resources">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:17.715893" level="INFO">${BS_USER} = amangeldyrakhimz_mDOu4L</msg>
+<var>${BS_USER}</var>
+<arg>BROWSERSTACK_USERNAME</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:17.715848" elapsed="0.000055"/>
+</kw>
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:17.715980" level="INFO">${BS_KEY} = Bxzghuw8wDVmTVCo8vsx</msg>
+<var>${BS_KEY}</var>
+<arg>BROWSERSTACK_ACCESS_KEY</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:17.715938" elapsed="0.000050"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-11-16T22:45:17.716185" level="INFO">Length is 23.</msg>
+<arg>${BS_USER}</arg>
+<arg>BrowserStack username not set in environment variable BROWSERSTACK_USERNAME</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-11-16T22:45:17.716020" elapsed="0.000182"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-11-16T22:45:17.716286" level="INFO">Length is 20.</msg>
+<arg>${BS_KEY}</arg>
+<arg>BrowserStack access key not set in environment variable BROWSERSTACK_ACCESS_KEY</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-11-16T22:45:17.716236" elapsed="0.000065"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-16T22:45:17.716396" level="INFO">${REMOTE_URL} = https://amangeldyrakhimz_mDOu4L:Bxzghuw8wDVmTVCo8vsx@hub-cloud.browserstack.com/wd/hub</msg>
+<var>${REMOTE_URL}</var>
+<arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-16T22:45:17.716335" elapsed="0.000070"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:45:17.716547" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/' through remote server at 'https://amangeldyrakhimz_mDOu4L:Bxzghuw8wDVmTVCo8vsx@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-11-16T22:45:18.642202" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-11-16T22:45:18.642378" level="INFO">/Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/.venv/lib/python3.14/site-packages/selenium/webdriver/remote/remote_connection.py:421: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
+  headers = self.get_remote_connection_headers(parsed_url, self._client_config.keep_alive)</msg>
+<msg time="2025-11-16T22:45:18.642597" level="FAIL">WebDriverException: Message: Automate testing time expired.
+</msg>
+<arg>${baseUrl}</arg>
+<arg>${browser}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-11-16T22:45:17.716450" elapsed="0.930891">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<arg>${ENV_BROWSER}</arg>
+<status status="FAIL" start="2025-11-16T22:45:17.715763" elapsed="0.931779">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<arg>'${ENV_BS}'=='True'</arg>
+<arg>Set BrowserStack Remote And Open</arg>
+<arg>${ENV_BROWSER}</arg>
+<arg>ELSE</arg>
+<arg>Open Browser</arg>
+<arg>${baseUrl}</arg>
+<arg>${ENV_BROWSER}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="FAIL" start="2025-11-16T22:45:17.715654" elapsed="0.931941">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<status status="FAIL" start="2025-11-16T22:45:17.715067" elapsed="0.932602">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${signUpButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:18.647798" elapsed="0.000029"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:18.647891" elapsed="0.000016"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${signUpButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:18.647962" elapsed="0.000014"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${signUpUsername}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:18.648025" elapsed="0.000014"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:18.648089" elapsed="0.000015"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${signUpUsername}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:18.648156" elapsed="0.000013"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:18.648214" elapsed="0.000013"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${signUpPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:18.648275" elapsed="0.000015"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:18.648337" elapsed="0.000013"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${signUpFormButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:18.648397" elapsed="0.000013"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:18.648455" elapsed="0.000012"/>
+</kw>
+<status status="FAIL" start="2025-11-16T22:45:17.714911" elapsed="0.933603">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<kw name="Close Browser" owner="resources">
+<status status="NOT RUN" start="2025-11-16T22:45:18.648676" elapsed="0.000096"/>
+</kw>
+<status status="FAIL" start="2025-11-16T22:45:17.714619" elapsed="0.934322">WebDriverException: Message: Automate testing time expired.
+</status>
+</test>
+<test id="s1-s1-t2" name="TC2_LOGIN_TEST" line="15">
+<kw name="Log in" owner="resources">
+<kw name="Open Test Browser" owner="resources">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:18.649759" level="INFO">${ENV_BS} = True</msg>
+<var>${ENV_BS}</var>
+<arg>BROWSERSTACK</arg>
+<arg>default=${BROWSERSTACK}</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:18.649605" elapsed="0.000175"/>
+</kw>
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:18.649952" level="INFO">${ENV_BROWSER} = Chrome</msg>
+<var>${ENV_BROWSER}</var>
+<arg>BROWSER</arg>
+<arg>default=${BROWSER}</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:18.649842" elapsed="0.000188"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Set BrowserStack Remote And Open" owner="resources">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:18.650875" level="INFO">${BS_USER} = amangeldyrakhimz_mDOu4L</msg>
+<var>${BS_USER}</var>
+<arg>BROWSERSTACK_USERNAME</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:18.650798" elapsed="0.000095"/>
+</kw>
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:18.651143" level="INFO">${BS_KEY} = Bxzghuw8wDVmTVCo8vsx</msg>
+<var>${BS_KEY}</var>
+<arg>BROWSERSTACK_ACCESS_KEY</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:18.651073" elapsed="0.000085"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-11-16T22:45:18.651342" level="INFO">Length is 23.</msg>
+<arg>${BS_USER}</arg>
+<arg>BrowserStack username not set in environment variable BROWSERSTACK_USERNAME</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-11-16T22:45:18.651219" elapsed="0.000160"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-11-16T22:45:18.651547" level="INFO">Length is 20.</msg>
+<arg>${BS_KEY}</arg>
+<arg>BrowserStack access key not set in environment variable BROWSERSTACK_ACCESS_KEY</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-11-16T22:45:18.651454" elapsed="0.000118"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-16T22:45:18.651736" level="INFO">${REMOTE_URL} = https://amangeldyrakhimz_mDOu4L:Bxzghuw8wDVmTVCo8vsx@hub-cloud.browserstack.com/wd/hub</msg>
+<var>${REMOTE_URL}</var>
+<arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-16T22:45:18.651632" elapsed="0.000120"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:45:18.651985" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/' through remote server at 'https://amangeldyrakhimz_mDOu4L:Bxzghuw8wDVmTVCo8vsx@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-11-16T22:45:20.654220" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-11-16T22:45:20.654731" level="FAIL">WebDriverException: Message: Automate testing time expired.
+</msg>
+<arg>${baseUrl}</arg>
+<arg>${browser}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-11-16T22:45:18.651827" elapsed="2.006343">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<arg>${ENV_BROWSER}</arg>
+<status status="FAIL" start="2025-11-16T22:45:18.650646" elapsed="2.007799">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<arg>'${ENV_BS}'=='True'</arg>
+<arg>Set BrowserStack Remote And Open</arg>
+<arg>${ENV_BROWSER}</arg>
+<arg>ELSE</arg>
+<arg>Open Browser</arg>
+<arg>${baseUrl}</arg>
+<arg>${ENV_BROWSER}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="FAIL" start="2025-11-16T22:45:18.650192" elapsed="2.008347">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<status status="FAIL" start="2025-11-16T22:45:18.649489" elapsed="2.009184">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:20.658941" elapsed="0.000052"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:20.659121" elapsed="0.000030"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:20.659262" elapsed="0.000029"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${loginUsernameField}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:20.659392" elapsed="0.000027"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:20.659515" elapsed="0.000027"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${loginUsernameField}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:20.659642" elapsed="0.000026"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${loginPasswordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:20.659768" elapsed="0.000026"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:20.659912" elapsed="0.000026"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${logInFormButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:20.660036" elapsed="0.000026"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:20.660148" elapsed="0.000026"/>
+</kw>
+<status status="FAIL" start="2025-11-16T22:45:18.649335" elapsed="2.010937">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<kw name="Close Browser" owner="resources">
+<status status="NOT RUN" start="2025-11-16T22:45:20.660649" elapsed="0.000049"/>
+</kw>
+<status status="FAIL" start="2025-11-16T22:45:18.649108" elapsed="2.011897">WebDriverException: Message: Automate testing time expired.
+</status>
+</test>
+<test id="s1-s1-t3" name="TC3_LOGOUT_TEST" line="19">
+<kw name="Log in" owner="resources">
+<kw name="Open Test Browser" owner="resources">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:20.662785" level="INFO">${ENV_BS} = True</msg>
+<var>${ENV_BS}</var>
+<arg>BROWSERSTACK</arg>
+<arg>default=${BROWSERSTACK}</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:20.662484" elapsed="0.000332"/>
+</kw>
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:20.663080" level="INFO">${ENV_BROWSER} = Chrome</msg>
+<var>${ENV_BROWSER}</var>
+<arg>BROWSER</arg>
+<arg>default=${BROWSER}</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:20.662912" elapsed="0.000195"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Set BrowserStack Remote And Open" owner="resources">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:20.664015" level="INFO">${BS_USER} = amangeldyrakhimz_mDOu4L</msg>
+<var>${BS_USER}</var>
+<arg>BROWSERSTACK_USERNAME</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:20.663889" elapsed="0.000154"/>
+</kw>
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:20.664242" level="INFO">${BS_KEY} = Bxzghuw8wDVmTVCo8vsx</msg>
+<var>${BS_KEY}</var>
+<arg>BROWSERSTACK_ACCESS_KEY</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:20.664133" elapsed="0.000135"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-11-16T22:45:20.664513" level="INFO">Length is 23.</msg>
+<arg>${BS_USER}</arg>
+<arg>BrowserStack username not set in environment variable BROWSERSTACK_USERNAME</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-11-16T22:45:20.664357" elapsed="0.000199"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-11-16T22:45:20.664756" level="INFO">Length is 20.</msg>
+<arg>${BS_KEY}</arg>
+<arg>BrowserStack access key not set in environment variable BROWSERSTACK_ACCESS_KEY</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-11-16T22:45:20.664642" elapsed="0.000187"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-16T22:45:20.665113" level="INFO">${REMOTE_URL} = https://amangeldyrakhimz_mDOu4L:Bxzghuw8wDVmTVCo8vsx@hub-cloud.browserstack.com/wd/hub</msg>
+<var>${REMOTE_URL}</var>
+<arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-16T22:45:20.664923" elapsed="0.000217"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:45:20.665588" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/' through remote server at 'https://amangeldyrakhimz_mDOu4L:Bxzghuw8wDVmTVCo8vsx@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-11-16T22:45:22.601467" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-11-16T22:45:22.602355" level="FAIL">WebDriverException: Message: Automate testing time expired.
+</msg>
+<arg>${baseUrl}</arg>
+<arg>${browser}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-11-16T22:45:20.665283" elapsed="1.942306">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<arg>${ENV_BROWSER}</arg>
+<status status="FAIL" start="2025-11-16T22:45:20.663647" elapsed="1.944311">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<arg>'${ENV_BS}'=='True'</arg>
+<arg>Set BrowserStack Remote And Open</arg>
+<arg>${ENV_BROWSER}</arg>
+<arg>ELSE</arg>
+<arg>Open Browser</arg>
+<arg>${baseUrl}</arg>
+<arg>${ENV_BROWSER}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="FAIL" start="2025-11-16T22:45:20.663267" elapsed="1.944806">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<status status="FAIL" start="2025-11-16T22:45:20.662218" elapsed="1.945998">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:22.608500" elapsed="0.000062"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:22.608701" elapsed="0.000033"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:22.608863" elapsed="0.000029"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${loginUsernameField}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:22.608996" elapsed="0.000028"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:22.609122" elapsed="0.000029"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${loginUsernameField}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:22.609262" elapsed="0.000030"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${loginPasswordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:22.609394" elapsed="0.000027"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:22.609511" elapsed="0.000026"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${logInFormButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:22.609632" elapsed="0.000025"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:22.609743" elapsed="0.000026"/>
+</kw>
+<status status="FAIL" start="2025-11-16T22:45:20.661885" elapsed="1.947992">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<kw name="Logout" owner="resources">
+<status status="NOT RUN" start="2025-11-16T22:45:22.610276" elapsed="0.000050"/>
+</kw>
+<kw name="Close Browser" owner="resources">
+<status status="NOT RUN" start="2025-11-16T22:45:22.610507" elapsed="0.000135"/>
+</kw>
+<status status="FAIL" start="2025-11-16T22:45:20.661384" elapsed="1.949513">WebDriverException: Message: Automate testing time expired.
+</status>
+</test>
+<test id="s1-s1-t4" name="TC4_ADD_TO_CART_TEST" line="24">
+<kw name="Log in" owner="resources">
+<kw name="Open Test Browser" owner="resources">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:22.618225" level="INFO">${ENV_BS} = True</msg>
+<var>${ENV_BS}</var>
+<arg>BROWSERSTACK</arg>
+<arg>default=${BROWSERSTACK}</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:22.617919" elapsed="0.000348"/>
+</kw>
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:22.618609" level="INFO">${ENV_BROWSER} = Chrome</msg>
+<var>${ENV_BROWSER}</var>
+<arg>BROWSER</arg>
+<arg>default=${BROWSER}</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:22.618407" elapsed="0.000232"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Set BrowserStack Remote And Open" owner="resources">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:22.619749" level="INFO">${BS_USER} = amangeldyrakhimz_mDOu4L</msg>
+<var>${BS_USER}</var>
+<arg>BROWSERSTACK_USERNAME</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:22.619588" elapsed="0.000196"/>
+</kw>
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-11-16T22:45:22.620062" level="INFO">${BS_KEY} = Bxzghuw8wDVmTVCo8vsx</msg>
+<var>${BS_KEY}</var>
+<arg>BROWSERSTACK_ACCESS_KEY</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2025-11-16T22:45:22.619899" elapsed="0.000193"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-11-16T22:45:22.620356" level="INFO">Length is 23.</msg>
+<arg>${BS_USER}</arg>
+<arg>BrowserStack username not set in environment variable BROWSERSTACK_USERNAME</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-11-16T22:45:22.620190" elapsed="0.000214"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-11-16T22:45:22.620612" level="INFO">Length is 20.</msg>
+<arg>${BS_KEY}</arg>
+<arg>BrowserStack access key not set in environment variable BROWSERSTACK_ACCESS_KEY</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-11-16T22:45:22.620501" elapsed="0.000148"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-16T22:45:22.620889" level="INFO">${REMOTE_URL} = https://amangeldyrakhimz_mDOu4L:Bxzghuw8wDVmTVCo8vsx@hub-cloud.browserstack.com/wd/hub</msg>
+<var>${REMOTE_URL}</var>
+<arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-16T22:45:22.620738" elapsed="0.000176"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:45:22.621326" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/' through remote server at 'https://amangeldyrakhimz_mDOu4L:Bxzghuw8wDVmTVCo8vsx@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-11-16T22:45:24.852005" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-11-16T22:45:24.852361" level="FAIL">WebDriverException: Message: Automate testing time expired.
+</msg>
+<arg>${baseUrl}</arg>
+<arg>${browser}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-11-16T22:45:22.621036" elapsed="2.235512">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<arg>${ENV_BROWSER}</arg>
+<status status="FAIL" start="2025-11-16T22:45:22.619245" elapsed="2.237578">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<arg>'${ENV_BS}'=='True'</arg>
+<arg>Set BrowserStack Remote And Open</arg>
+<arg>${ENV_BROWSER}</arg>
+<arg>ELSE</arg>
+<arg>Open Browser</arg>
+<arg>${baseUrl}</arg>
+<arg>${ENV_BROWSER}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="FAIL" start="2025-11-16T22:45:22.618776" elapsed="2.238139">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<status status="FAIL" start="2025-11-16T22:45:22.617520" elapsed="2.239527">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:24.857282" elapsed="0.000052"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:24.857458" elapsed="0.000031"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:24.857617" elapsed="0.000033"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${loginUsernameField}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:24.857750" elapsed="0.000026"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:24.857877" elapsed="0.000042"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${loginUsernameField}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:24.858079" elapsed="0.000037"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${loginPasswordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:24.858227" elapsed="0.000245"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:24.858606" elapsed="0.000032"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${logInFormButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:24.858747" elapsed="0.000027"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-16T22:45:24.858862" elapsed="0.000025"/>
+</kw>
+<status status="FAIL" start="2025-11-16T22:45:22.611834" elapsed="2.247441">WebDriverException: Message: Automate testing time expired.
+</status>
+</kw>
+<kw name="Add to Cart" owner="resources">
+<status status="NOT RUN" start="2025-11-16T22:45:24.859939" elapsed="0.000059"/>
+</kw>
+<kw name="Close Browser" owner="resources">
+<status status="NOT RUN" start="2025-11-16T22:45:24.860308" elapsed="0.000045"/>
+</kw>
+<status status="FAIL" start="2025-11-16T22:45:22.611224" elapsed="2.249383">WebDriverException: Message: Automate testing time expired.
+</status>
+</test>
+<kw name="Close Browser" owner="resources" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-16T22:45:24.861627" elapsed="0.000220"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:45:24.861387" elapsed="0.000521"/>
+</kw>
+<status status="FAIL" start="2025-11-16T22:45:17.641001" elapsed="7.220939"/>
+</suite>
+<status status="FAIL" start="2025-11-16T22:45:17.628379" elapsed="7.234232"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testCases" id="s1" pass="0" fail="4" skip="0">testCases</stat>
+<stat name="Test" id="s1-s1" pass="0" fail="4" skip="0">testCases.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

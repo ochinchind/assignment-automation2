@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.14.0 on darwin)" generated="2025-11-16T22:32:58.718217" rpa="false" schemaversion="5">
+<suite id="s1" name="testCases" source="/Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/testCases">
+<suite id="s1-s1" name="Test" source="/Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/testCases/test.robot">
+<test id="s1-s1-t1" name="TC1_SIGN_UP_TEST" line="11">
+<kw name="Sign Up" owner="resources">
+<kw name="Open Test Browser" owner="resources">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:32:58.804826" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<msg time="2025-11-16T22:32:58.916626" level="WARN">The chromedriver version (141.0.7390.122) detected in PATH at /Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/chromedriver might not be compatible with the detected chrome version (142.0.7444.162); currently, chromedriver 142.0.7444.162 is recommended for chrome 142.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${baseUrl}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-16T22:32:58.804733" elapsed="6.661596"/>
+</kw>
+<arg>'${BROWSERSTACK}'=='True'</arg>
+<arg>Set BrowserStack Remote And Open</arg>
+<arg>ELSE</arg>
+<arg>Open Browser</arg>
+<arg>${baseUrl}</arg>
+<arg>${BROWSER}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-16T22:32:58.804619" elapsed="6.661863"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:32:58.804333" elapsed="6.662226"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${signUpButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-16T22:33:05.466690" elapsed="0.099198"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:33:06.567759" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:33:05.565986" elapsed="1.001852"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:06.568108" level="INFO">Clicking element '//*[@id="signin2"]'.</msg>
+<arg>${signUpButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:33:06.567951" elapsed="1.347188"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${signUpUsername}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-16T22:33:07.915280" elapsed="1.041429"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:33:09.958611" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:33:08.956830" elapsed="1.001858"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:09.958952" level="INFO">Typing text 'amanTest1' into text field '//*[@id="sign-username"]'.</msg>
+<arg>${signUpUsername}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:33:09.958793" elapsed="1.646583"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:33:13.605979" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:33:11.605510" elapsed="2.000900"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:13.607689" level="INFO">Typing password into text field '//*[@id="sign-password"]'.</msg>
+<msg time="2025-11-16T22:33:13.815516" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${signUpPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:33:13.606969" elapsed="0.355254"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:33:15.963370" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:33:13.962360" elapsed="2.001363"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:15.964948" level="INFO">Clicking element '//*[@id="signInModal"]/div/div/div[3]/button[2]'.</msg>
+<arg>${signUpFormButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:33:15.964242" elapsed="0.430780"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:33:19.397355" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:33:16.395128" elapsed="3.002293"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:32:58.804185" elapsed="20.593298"/>
+</kw>
+<kw name="Close Browser" owner="resources">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-16T22:33:19.397846" elapsed="0.082804"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:33:19.397683" elapsed="0.083033"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:32:58.803900" elapsed="20.676933"/>
+</test>
+<test id="s1-s1-t2" name="TC2_LOGIN_TEST" line="15">
+<kw name="Log in" owner="resources">
+<kw name="Open Test Browser" owner="resources">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:19.481672" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<msg time="2025-11-16T22:33:19.584942" level="WARN">The chromedriver version (141.0.7390.122) detected in PATH at /Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/chromedriver might not be compatible with the detected chrome version (142.0.7444.162); currently, chromedriver 142.0.7444.162 is recommended for chrome 142.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${baseUrl}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-16T22:33:19.481580" elapsed="6.659472"/>
+</kw>
+<arg>'${BROWSERSTACK}'=='True'</arg>
+<arg>Set BrowserStack Remote And Open</arg>
+<arg>ELSE</arg>
+<arg>Open Browser</arg>
+<arg>${baseUrl}</arg>
+<arg>${BROWSER}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-16T22:33:19.481436" elapsed="6.659748"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:33:19.481340" elapsed="6.659906"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-16T22:33:26.141393" elapsed="0.110888"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:33:27.252977" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:33:26.252386" elapsed="1.000677"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:27.253321" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
+<arg>${logInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:33:27.253176" elapsed="1.438147"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${loginUsernameField}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-16T22:33:28.691444" elapsed="1.409505"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:33:31.101802" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:33:30.101109" elapsed="1.000917"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:31.102819" level="INFO">Typing text 'amanTest1' into text field '//*[@id="loginusername"]'.</msg>
+<arg>${loginUsernameField}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:33:31.102348" elapsed="0.617332"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:31.720001" level="INFO">Typing password into text field '//*[@id="loginpassword"]'.</msg>
+<msg time="2025-11-16T22:33:32.531714" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${loginPasswordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:33:31.719812" elapsed="1.049374"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:33:33.771569" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:33:32.769293" elapsed="1.002642"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:33.772797" level="INFO">Clicking element '//*[@id="logInModal"]/div/div/div[3]/button[2]'.</msg>
+<arg>${logInFormButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:33:33.772327" elapsed="0.268195"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:33:36.041678" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:33:34.040641" elapsed="2.001130"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:33:19.481226" elapsed="16.560605"/>
+</kw>
+<kw name="Close Browser" owner="resources">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-16T22:33:36.042266" elapsed="0.079779"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:33:36.042060" elapsed="0.080071"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:33:19.481014" elapsed="16.641288"/>
+</test>
+<test id="s1-s1-t3" name="TC3_LOGOUT_TEST" line="19">
+<kw name="Log in" owner="resources">
+<kw name="Open Test Browser" owner="resources">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:36.123306" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<msg time="2025-11-16T22:33:36.226579" level="WARN">The chromedriver version (141.0.7390.122) detected in PATH at /Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/chromedriver might not be compatible with the detected chrome version (142.0.7444.162); currently, chromedriver 142.0.7444.162 is recommended for chrome 142.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${baseUrl}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-16T22:33:36.123196" elapsed="6.547998"/>
+</kw>
+<arg>'${BROWSERSTACK}'=='True'</arg>
+<arg>Set BrowserStack Remote And Open</arg>
+<arg>ELSE</arg>
+<arg>Open Browser</arg>
+<arg>${baseUrl}</arg>
+<arg>${BROWSER}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-16T22:33:36.123014" elapsed="6.548314"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:33:36.122871" elapsed="6.548528"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-16T22:33:42.671533" elapsed="0.096740"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:33:43.770641" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:33:42.768375" elapsed="1.002356"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:43.771003" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
+<arg>${logInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:33:43.770850" elapsed="1.272043"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${loginUsernameField}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-16T22:33:45.043021" elapsed="0.802357"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:33:46.845632" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:33:45.845489" elapsed="1.000241"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:46.846085" level="INFO">Typing text 'amanTest1' into text field '//*[@id="loginusername"]'.</msg>
+<arg>${loginUsernameField}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:33:46.845866" elapsed="0.901383"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:47.747521" level="INFO">Typing password into text field '//*[@id="loginpassword"]'.</msg>
+<msg time="2025-11-16T22:33:49.021758" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${loginPasswordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:33:47.747360" elapsed="1.467137"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:33:50.215897" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:33:49.214594" elapsed="1.001391"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:50.216261" level="INFO">Clicking element '//*[@id="logInModal"]/div/div/div[3]/button[2]'.</msg>
+<arg>${logInFormButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:33:50.216100" elapsed="0.573667"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:33:52.792503" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:33:50.789882" elapsed="2.002720"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:33:36.122734" elapsed="16.669940"/>
+</kw>
+<kw name="Logout" owner="resources">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${logoutButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=Logout button not found</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-16T22:33:52.793156" elapsed="0.666209"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:33:54.459956" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:33:53.459632" elapsed="1.000412"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:54.460352" level="INFO">Clicking element '//*[@id="logout2"]'.</msg>
+<arg>${logoutButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:33:54.460166" elapsed="0.799365"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:33:57.260322" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:33:55.259636" elapsed="2.001079"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=Login button should appear after logout</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-16T22:33:57.261260" elapsed="0.015390"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:33:52.792948" elapsed="4.483881"/>
+</kw>
+<kw name="Close Browser" owner="resources">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-16T22:33:57.277493" elapsed="0.083923"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:33:57.277167" elapsed="0.084337"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:33:36.122490" elapsed="21.239141"/>
+</test>
+<test id="s1-s1-t4" name="TC4_ADD_TO_CART_TEST" line="24">
+<kw name="Log in" owner="resources">
+<kw name="Open Test Browser" owner="resources">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:33:57.362589" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<msg time="2025-11-16T22:33:57.478720" level="WARN">The chromedriver version (141.0.7390.122) detected in PATH at /Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/chromedriver might not be compatible with the detected chrome version (142.0.7444.162); currently, chromedriver 142.0.7444.162 is recommended for chrome 142.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${baseUrl}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-16T22:33:57.362477" elapsed="6.742401"/>
+</kw>
+<arg>'${BROWSERSTACK}'=='True'</arg>
+<arg>Set BrowserStack Remote And Open</arg>
+<arg>ELSE</arg>
+<arg>Open Browser</arg>
+<arg>${baseUrl}</arg>
+<arg>${BROWSER}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-16T22:33:57.362308" elapsed="6.742704"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:33:57.362206" elapsed="6.742875"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-16T22:34:04.105209" elapsed="0.101094"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:34:05.208009" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:34:04.206399" elapsed="1.001697"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:34:05.208359" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
+<arg>${logInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:34:05.208205" elapsed="1.391989"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${loginUsernameField}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-16T22:34:06.600311" elapsed="0.851968"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:34:08.454608" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:34:07.452391" elapsed="1.002350"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:34:08.455096" level="INFO">Typing text 'amanTest1' into text field '//*[@id="loginusername"]'.</msg>
+<arg>${loginUsernameField}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:34:08.454903" elapsed="0.734639"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:34:09.189837" level="INFO">Typing password into text field '//*[@id="loginpassword"]'.</msg>
+<msg time="2025-11-16T22:34:10.133057" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${loginPasswordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:34:09.189672" elapsed="1.890553"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:34:12.081234" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:34:11.080330" elapsed="1.000992"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:34:12.081592" level="INFO">Clicking element '//*[@id="logInModal"]/div/div/div[3]/button[2]'.</msg>
+<arg>${logInFormButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:34:12.081433" elapsed="0.621531"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:34:14.704714" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:34:12.703084" elapsed="2.001710"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:33:57.362084" elapsed="17.342777"/>
+</kw>
+<kw name="Add to Cart" owner="resources">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${productLink}</arg>
+<arg>timeout=80</arg>
+<arg>error=Product not found</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-16T22:34:14.705255" elapsed="1.479816"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:34:17.186501" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:34:16.185178" elapsed="1.001416"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:34:17.186846" level="INFO">Clicking element '//*[@id="tbodyid"]/div[1]/div/div/h4/a'.</msg>
+<arg>${productLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:34:17.186704" elapsed="0.950764"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:34:20.140196" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:34:18.137755" elapsed="2.002858"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${addToCartButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=Add to cart button not found</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-16T22:34:20.141119" elapsed="0.022508"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:34:21.166123" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:34:20.163856" elapsed="1.002386"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:34:21.166618" level="INFO">Clicking element '//*[@id="tbodyid"]/div[2]/div/a'.</msg>
+<arg>${addToCartButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-16T22:34:21.166399" elapsed="0.269387"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:34:23.438324" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:34:21.435909" elapsed="2.002951"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-11-16T22:34:23.440179" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-11-16T22:34:23.439420" elapsed="0.011271"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-16T22:34:24.451220" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-16T22:34:23.450960" elapsed="1.000349"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:34:14.705080" elapsed="9.746303"/>
+</kw>
+<kw name="Close Browser" owner="resources">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-16T22:34:24.451744" elapsed="0.084441"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:34:24.451545" elapsed="0.084723"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:33:57.361835" elapsed="27.174565"/>
+</test>
+<kw name="Close Browser" owner="resources" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-16T22:34:24.537007" elapsed="0.000066"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:34:24.536890" elapsed="0.000209"/>
+</kw>
+<status status="PASS" start="2025-11-16T22:32:58.731517" elapsed="85.805595"/>
+</suite>
+<status status="PASS" start="2025-11-16T22:32:58.718691" elapsed="85.818727"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testCases" id="s1" pass="4" fail="0" skip="0">testCases</stat>
+<stat name="Test" id="s1-s1" pass="4" fail="0" skip="0">testCases.Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-11-16T22:32:58.916626" level="WARN">The chromedriver version (141.0.7390.122) detected in PATH at /Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/chromedriver might not be compatible with the detected chrome version (142.0.7444.162); currently, chromedriver 142.0.7444.162 is recommended for chrome 142.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-11-16T22:33:19.584942" level="WARN">The chromedriver version (141.0.7390.122) detected in PATH at /Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/chromedriver might not be compatible with the detected chrome version (142.0.7444.162); currently, chromedriver 142.0.7444.162 is recommended for chrome 142.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-11-16T22:33:36.226579" level="WARN">The chromedriver version (141.0.7390.122) detected in PATH at /Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/chromedriver might not be compatible with the detected chrome version (142.0.7444.162); currently, chromedriver 142.0.7444.162 is recommended for chrome 142.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-11-16T22:33:57.478720" level="WARN">The chromedriver version (141.0.7390.122) detected in PATH at /Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/chromedriver might not be compatible with the detected chrome version (142.0.7444.162); currently, chromedriver 142.0.7444.162 is recommended for chrome 142.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

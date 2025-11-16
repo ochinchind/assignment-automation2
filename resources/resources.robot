@@ -1,10 +1,32 @@
 *** Settings ***
 Library  SeleniumLibrary
+Library  OperatingSystem
 Variables   ./locators.py
 Variables   ./testData.py
+*** Variables ***
+${BROWSER}    Chrome
+${BROWSERSTACK}    False
+
+
 *** Keywords ***
+Open Test Browser
+    # Prefer environment variables so CI/script exports take effect
+    ${ENV_BS}=    Get Environment Variable    BROWSERSTACK    default=${BROWSERSTACK}
+    ${ENV_BROWSER}=    Get Environment Variable    BROWSER    default=${BROWSER}
+    Run Keyword If    '${ENV_BS}'=='True'    Set BrowserStack Remote And Open    ${ENV_BROWSER}
+    ...    ELSE    Open Browser    ${baseUrl}    ${ENV_BROWSER}
+
+Set BrowserStack Remote And Open
+    [Arguments]    ${browser}
+    ${BS_USER}=    Get Environment Variable    BROWSERSTACK_USERNAME
+    ${BS_KEY}=     Get Environment Variable    BROWSERSTACK_ACCESS_KEY
+    # Validate credentials using non-deprecated keyword
+    Should Not Be Empty    ${BS_USER}    BrowserStack username not set in environment variable BROWSERSTACK_USERNAME
+    Should Not Be Empty    ${BS_KEY}     BrowserStack access key not set in environment variable BROWSERSTACK_ACCESS_KEY
+    ${REMOTE_URL}=    Set Variable    https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub
+    Open Browser    ${baseUrl}    ${browser}    remote_url=${REMOTE_URL}
 Log in
-    Open Browser    ${baseUrl}      Chrome
+    Open Test Browser
     wait until page contains element    ${logInButton}    timeout=80      error=logInButtonNotFound
     sleep   1s
     click element   ${logInButton}
@@ -20,7 +42,7 @@ Close Browser
     Close All Browsers
 
 Sign Up
-    Open Browser    ${baseUrl}      Chrome
+    Open Test Browser
     wait until page contains element    ${signUpButton}    timeout=80      error=logInButtonNotFound
     sleep   1s
     click element   ${signUpButton}
