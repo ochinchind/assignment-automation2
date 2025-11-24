@@ -89,6 +89,11 @@ Open BrowserStack Edge
     Open Browser    ${baseUrl}    Edge    remote_url=${remote_url}    options=${edge_options}
     Maximize Browser Window
 
+Mark Test Status
+    [Arguments]    ${status}    ${reason}
+    ${ENV_BS}=    Get Environment Variable    BROWSERSTACK    default=${BROWSERSTACK}
+    Run Keyword If    '${ENV_BS}'=='True'    Execute JavaScript    browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"${status}", "reason": "${reason}"}}
+
 Log in
     [Arguments]    ${browser}=Chrome    ${os}=Windows    ${os_version}=10    ${browser_version}=latest
     Open Test Browser    ${browser}    ${os}    ${os_version}    ${browser_version}
