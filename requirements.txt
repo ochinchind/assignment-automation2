@@ -1,0 +1,10 @@
+# Robot Framework and Selenium
+robotframework>=6.0.0
+robotframework-seleniumlibrary>=6.1.0
+selenium>=4.15.0
+
+# Parallel execution
+robotframework-pabot>=2.16.0
+
+# Utilities
+requests>=2.31.0

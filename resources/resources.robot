@@ -1,32 +1,93 @@
 *** Settings ***
 Library  SeleniumLibrary
 Library  OperatingSystem
+Library  Collections
 Variables   ./locators.py
 Variables   ./testData.py
+
 *** Variables ***
 ${BROWSER}    Chrome
 ${BROWSERSTACK}    False
 
-
 *** Keywords ***
 Open Test Browser
-    # Prefer environment variables so CI/script exports take effect
+    [Arguments]    ${browser}=Chrome    ${os}=Windows    ${os_version}=10    ${browser_version}=latest
     ${ENV_BS}=    Get Environment Variable    BROWSERSTACK    default=${BROWSERSTACK}
-    ${ENV_BROWSER}=    Get Environment Variable    BROWSER    default=${BROWSER}
-    Run Keyword If    '${ENV_BS}'=='True'    Set BrowserStack Remote And Open    ${ENV_BROWSER}
-    ...    ELSE    Open Browser    ${baseUrl}    ${ENV_BROWSER}
+    Run Keyword If    '${ENV_BS}'=='True'    Open BrowserStack Browser    ${browser}    ${os}    ${os_version}    ${browser_version}
+    ...    ELSE    Open Browser    ${baseUrl}    ${browser}
 
-Set BrowserStack Remote And Open
-    [Arguments]    ${browser}
+Open BrowserStack Browser
+    [Arguments]    ${browser}    ${os}    ${os_version}    ${browser_version}
     ${BS_USER}=    Get Environment Variable    BROWSERSTACK_USERNAME
     ${BS_KEY}=     Get Environment Variable    BROWSERSTACK_ACCESS_KEY
-    # Validate credentials using non-deprecated keyword
-    Should Not Be Empty    ${BS_USER}    BrowserStack username not set in environment variable BROWSERSTACK_USERNAME
-    Should Not Be Empty    ${BS_KEY}     BrowserStack access key not set in environment variable BROWSERSTACK_ACCESS_KEY
+    Should Not Be Empty    ${BS_USER}    BrowserStack username not set
+    Should Not Be Empty    ${BS_KEY}     BrowserStack access key not set
+    
     ${REMOTE_URL}=    Set Variable    https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub
-    Open Browser    ${baseUrl}    ${browser}    remote_url=${REMOTE_URL}
+    
+    # Create browser options based on browser type
+    Run Keyword If    '${browser}'=='Chrome'    Open BrowserStack Chrome    ${REMOTE_URL}    ${os}    ${os_version}    ${browser_version}
+    ...    ELSE IF    '${browser}'=='Safari'    Open BrowserStack Safari    ${REMOTE_URL}    ${os}    ${os_version}    ${browser_version}
+    ...    ELSE IF    '${browser}'=='Edge'    Open BrowserStack Edge    ${REMOTE_URL}    ${os}    ${os_version}    ${browser_version}
+    ...    ELSE    Fail    Unsupported browser: ${browser}
+
+Open BrowserStack Chrome
+    [Arguments]    ${remote_url}    ${os}    ${os_version}    ${browser_version}
+    ${chrome_options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    
+    # BrowserStack specific options
+    &{bstack_options}=    Create Dictionary
+    ...    os=${os}
+    ...    osVersion=${os_version}
+    ...    browserVersion=${browser_version}
+    ...    buildName=browserstack-build-1
+    ...    projectName=BrowserStack Sample
+    ...    sessionName=Robot Framework Test
+    ...    seleniumVersion=4.0.0
+    
+    Call Method    ${chrome_options}    set_capability    bstack:options    ${bstack_options}
+    
+    Open Browser    ${baseUrl}    Chrome    remote_url=${remote_url}    options=${chrome_options}
+
+Open BrowserStack Safari
+    [Arguments]    ${remote_url}    ${os}    ${os_version}    ${browser_version}
+    ${safari_options}=    Evaluate    sys.modules['selenium.webdriver'].SafariOptions()    sys, selenium.webdriver
+    
+    # BrowserStack specific options
+    &{bstack_options}=    Create Dictionary
+    ...    os=${os}
+    ...    osVersion=${os_version}
+    ...    browserVersion=${browser_version}
+    ...    buildName=browserstack-build-1
+    ...    projectName=BrowserStack Sample
+    ...    sessionName=Robot Framework Test
+    ...    seleniumVersion=4.0.0
+    
+    Call Method    ${safari_options}    set_capability    bstack:options    ${bstack_options}
+    
+    Open Browser    ${baseUrl}    Safari    remote_url=${remote_url}    options=${safari_options}
+
+Open BrowserStack Edge
+    [Arguments]    ${remote_url}    ${os}    ${os_version}    ${browser_version}
+    ${edge_options}=    Evaluate    sys.modules['selenium.webdriver'].EdgeOptions()    sys, selenium.webdriver
+    
+    # BrowserStack specific options
+    &{bstack_options}=    Create Dictionary
+    ...    os=${os}
+    ...    osVersion=${os_version}
+    ...    browserVersion=${browser_version}
+    ...    buildName=browserstack-build-1
+    ...    projectName=BrowserStack Sample
+    ...    sessionName=Robot Framework Test
+    ...    seleniumVersion=4.0.0
+    
+    Call Method    ${edge_options}    set_capability    bstack:options    ${bstack_options}
+    
+    Open Browser    ${baseUrl}    Edge    remote_url=${remote_url}    options=${edge_options}
+
 Log in
-    Open Test Browser
+    [Arguments]    ${browser}=Chrome    ${os}=Windows    ${os_version}=10    ${browser_version}=latest
+    Open Test Browser    ${browser}    ${os}    ${os_version}    ${browser_version}
     wait until page contains element    ${logInButton}    timeout=80      error=logInButtonNotFound
     sleep   1s
     click element   ${logInButton}
@@ -42,7 +103,8 @@ Close Browser
     Close All Browsers
 
 Sign Up
-    Open Test Browser
+    [Arguments]    ${browser}=Chrome    ${os}=Windows    ${os_version}=10    ${browser_version}=latest
+    Open Test Browser    ${browser}    ${os}    ${os_version}    ${browser_version}
     wait until page contains element    ${signUpButton}    timeout=80      error=logInButtonNotFound
     sleep   1s
     click element   ${signUpButton}
