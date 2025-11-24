@@ -15,6 +15,7 @@ Open Test Browser
     ${ENV_BS}=    Get Environment Variable    BROWSERSTACK    default=${BROWSERSTACK}
     Run Keyword If    '${ENV_BS}'=='True'    Open BrowserStack Browser    ${browser}    ${os}    ${os_version}    ${browser_version}
     ...    ELSE    Open Browser    ${baseUrl}    ${browser}
+    Run Keyword If    '${ENV_BS}'=='False'    Maximize Browser Window
 
 Open BrowserStack Browser
     [Arguments]    ${browser}    ${os}    ${os_version}    ${browser_version}
@@ -48,6 +49,7 @@ Open BrowserStack Chrome
     Call Method    ${chrome_options}    set_capability    bstack:options    ${bstack_options}
     
     Open Browser    ${baseUrl}    Chrome    remote_url=${remote_url}    options=${chrome_options}
+    Maximize Browser Window
 
 Open BrowserStack Safari
     [Arguments]    ${remote_url}    ${os}    ${os_version}    ${browser_version}
@@ -66,6 +68,7 @@ Open BrowserStack Safari
     Call Method    ${safari_options}    set_capability    bstack:options    ${bstack_options}
     
     Open Browser    ${baseUrl}    Safari    remote_url=${remote_url}    options=${safari_options}
+    Maximize Browser Window
 
 Open BrowserStack Edge
     [Arguments]    ${remote_url}    ${os}    ${os_version}    ${browser_version}
@@ -84,6 +87,7 @@ Open BrowserStack Edge
     Call Method    ${edge_options}    set_capability    bstack:options    ${bstack_options}
     
     Open Browser    ${baseUrl}    Edge    remote_url=${remote_url}    options=${edge_options}
+    Maximize Browser Window
 
 Log in
     [Arguments]    ${browser}=Chrome    ${os}=Windows    ${os_version}=10    ${browser_version}=latest

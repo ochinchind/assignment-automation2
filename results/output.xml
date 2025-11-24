@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.14.0 on darwin)" generated="2025-11-24T20:15:16.852446" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.14.0 on darwin)" generated="2025-11-24T20:59:01.177420" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Browserstack" source="/Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/testCases/test_browserstack.robot">
 <test id="s1-t1" name="TC1_SIGN_UP_CHROME" line="12">
 <kw name="Sign Up" owner="resources">
 <kw name="Open Test Browser" owner="resources">
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:15:16.929401" level="INFO">${ENV_BS} = True</msg>
+<msg time="2025-11-24T20:59:01.278341" level="INFO">${ENV_BS} = True</msg>
 <var>${ENV_BS}</var>
 <arg>BROWSERSTACK</arg>
 <arg>default=${BROWSERSTACK}</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:15:16.929313" elapsed="0.000105"/>
+<status status="PASS" start="2025-11-24T20:59:01.278252" elapsed="0.000106"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Open BrowserStack Browser" owner="resources">
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:15:16.929762" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
+<msg time="2025-11-24T20:59:01.278784" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
 <var>${BS_USER}</var>
 <arg>BROWSERSTACK_USERNAME</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:15:16.929714" elapsed="0.000061"/>
+<status status="PASS" start="2025-11-24T20:59:01.278716" elapsed="0.000084"/>
 </kw>
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:15:16.929858" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
+<msg time="2025-11-24T20:59:01.278900" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
 <var>${BS_KEY}</var>
 <arg>BROWSERSTACK_ACCESS_KEY</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:15:16.929817" elapsed="0.000050"/>
+<status status="PASS" start="2025-11-24T20:59:01.278850" elapsed="0.000061"/>
 </kw>
 <kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:15:16.929964" level="INFO">Length is 20.</msg>
+<msg time="2025-11-24T20:59:01.279021" level="INFO">Length is 20.</msg>
 <arg>${BS_USER}</arg>
 <arg>BrowserStack username not set</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:15:16.929902" elapsed="0.000078"/>
+<status status="PASS" start="2025-11-24T20:59:01.278952" elapsed="0.000087"/>
 </kw>
 <kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:15:16.930059" level="INFO">Length is 20.</msg>
+<msg time="2025-11-24T20:59:01.279128" level="INFO">Length is 20.</msg>
 <arg>${BS_KEY}</arg>
 <arg>BrowserStack access key not set</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:15:16.930012" elapsed="0.000063"/>
+<status status="PASS" start="2025-11-24T20:59:01.279076" elapsed="0.000068"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-24T20:15:16.930168" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
+<msg time="2025-11-24T20:59:01.279242" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
 <var>${REMOTE_URL}</var>
 <arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-24T20:15:16.930110" elapsed="0.000068"/>
+<status status="PASS" start="2025-11-24T20:59:01.279180" elapsed="0.000072"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Open BrowserStack Chrome" owner="resources">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-24T20:15:16.930505" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x106afc050&gt;</msg>
+<msg time="2025-11-24T20:59:01.279606" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x1057fc050&gt;</msg>
 <var>${chrome_options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-24T20:15:16.930428" elapsed="0.000087"/>
+<status status="PASS" start="2025-11-24T20:59:01.279527" elapsed="0.000090"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T20:15:16.930702" level="INFO">&amp;{bstack_options} = { os=Windows | osVersion=10 | browserVersion=120.0 | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
+<msg time="2025-11-24T20:59:01.279811" level="INFO">&amp;{bstack_options} = { os=Windows | osVersion=10 | browserVersion=120.0 | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
 <var>&amp;{bstack_options}</var>
 <arg>os=${os}</arg>
 <arg>osVersion=${os_version}</arg>
@@ -70,7 +70,7 @@
 <arg>sessionName=Robot Framework Test</arg>
 <arg>seleniumVersion=4.0.0</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T20:15:16.930557" elapsed="0.000156"/>
+<status status="PASS" start="2025-11-24T20:59:01.279663" elapsed="0.000160"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${chrome_options}</arg>
@@ -78,24 +78,28 @@
 <arg>bstack:options</arg>
 <arg>${bstack_options}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-24T20:15:16.930757" elapsed="0.000053"/>
+<status status="PASS" start="2025-11-24T20:59:01.279866" elapsed="0.000055"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:15:16.930965" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
-<msg time="2025-11-24T20:15:33.492873" level="INFO">/Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/env/lib/python3.14/site-packages/selenium/webdriver/remote/remote_connection.py:421: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
+<msg time="2025-11-24T20:59:01.280079" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-11-24T20:59:15.285152" level="INFO">/Users/otkelbayakberdi/Documents/projects/software_testing/task3/assignment-automation2/env/lib/python3.14/site-packages/selenium/webdriver/remote/remote_connection.py:421: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
   headers = self.get_remote_connection_headers(parsed_url, self._client_config.keep_alive)</msg>
 <arg>${baseUrl}</arg>
 <arg>Chrome</arg>
 <arg>remote_url=${remote_url}</arg>
 <arg>options=${chrome_options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-24T20:15:16.930856" elapsed="16.562905"/>
+<status status="PASS" start="2025-11-24T20:59:01.279969" elapsed="14.005484"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-24T20:59:15.286398" elapsed="0.866505"/>
 </kw>
 <arg>${REMOTE_URL}</arg>
 <arg>${os}</arg>
 <arg>${os_version}</arg>
 <arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:15:16.930313" elapsed="16.564309"/>
+<status status="PASS" start="2025-11-24T20:59:01.279407" elapsed="14.873915"/>
 </kw>
 <arg>'${browser}'=='Chrome'</arg>
 <arg>Open BrowserStack Chrome</arg>
@@ -121,13 +125,13 @@
 <arg>Fail</arg>
 <arg>Unsupported browser: ${browser}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:15:16.930218" elapsed="16.564560"/>
+<status status="PASS" start="2025-11-24T20:59:01.279293" elapsed="14.874269"/>
 </kw>
 <arg>${browser}</arg>
 <arg>${os}</arg>
 <arg>${os_version}</arg>
 <arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:15:16.929595" elapsed="16.565353"/>
+<status status="PASS" start="2025-11-24T20:59:01.278539" elapsed="14.875299"/>
 </kw>
 <arg>'${ENV_BS}'=='True'</arg>
 <arg>Open BrowserStack Browser</arg>
@@ -140,260 +144,164 @@
 <arg>${baseUrl}</arg>
 <arg>${browser}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:15:16.929483" elapsed="16.565542"/>
+<status status="PASS" start="2025-11-24T20:59:01.278422" elapsed="14.875596"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${ENV_BS}'=='False'</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-24T20:59:16.154476" elapsed="0.000881"/>
 </kw>
 <arg>${browser}</arg>
 <arg>${os}</arg>
 <arg>${os_version}</arg>
 <arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:15:16.928951" elapsed="16.566188"/>
+<status status="PASS" start="2025-11-24T20:59:01.277886" elapsed="14.877540"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${signUpButton}</arg>
 <arg>timeout=80</arg>
 <arg>error=logInButtonNotFound</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:15:33.495712" elapsed="0.279383"/>
+<status status="PASS" start="2025-11-24T20:59:16.155596" elapsed="0.327040"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:15:34.778110" level="INFO">Slept 1 second.</msg>
+<msg time="2025-11-24T20:59:17.484229" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:15:33.775737" elapsed="1.002710"/>
+<status status="PASS" start="2025-11-24T20:59:16.483013" elapsed="1.001470"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:15:34.779410" level="INFO">Clicking element '//*[@id="signin2"]'.</msg>
-<msg time="2025-11-24T20:15:38.553111" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-24T20:15:38.553712" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="signin2" data-toggle="modal" data-target="#signInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (363, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF789D84D32+56194]
-	(No symbol) [0x00007FF789CF04E2]
-	(No symbol) [0x00007FF789B976AA]
-	(No symbol) [0x00007FF789BE8763]
-	(No symbol) [0x00007FF789BE675D]
-	(No symbol) [0x00007FF789BE3F5C]
-	(No symbol) [0x00007FF789BE2D15]
-	(No symbol) [0x00007FF789BD687F]
-	(No symbol) [0x00007FF789C05E7A]
-	(No symbol) [0x00007FF789BD6226]
-	(No symbol) [0x00007FF789C06320]
-	(No symbol) [0x00007FF789C22786]
-	(No symbol) [0x00007FF789C05C23]
-	(No symbol) [0x00007FF789BD4A45]
-	(No symbol) [0x00007FF789BD5AD4]
-	GetHandleVerifier [0x00007FF78A0FD5EB+3695675]
-	GetHandleVerifier [0x00007FF78A1561C7+4059159]
-	GetHandleVerifier [0x00007FF78A14DF93+4025827]
-	GetHandleVerifier [0x00007FF789E1F059+687785]
-	(No symbol) [0x00007FF789CFB538]
-	(No symbol) [0x00007FF789CF7594]
-	(No symbol) [0x00007FF789CF7719]
-	(No symbol) [0x00007FF789CE80C4]
-	BaseThreadInitThunk [0x00007FF8856E3034+20]
-	RtlUserThreadStart [0x00007FF8859F1551+33]
-</msg>
+<msg time="2025-11-24T20:59:17.485580" level="INFO">Clicking element '//*[@id="signin2"]'.</msg>
 <arg>${signUpButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-11-24T20:15:34.778869" elapsed="3.782371">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="signin2" data-toggle="modal" data-target="#signInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (363, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF789D84D32+56194]
-	(No symbol) [0x00007FF789CF04E2]
-	(No symbol) [0x00007FF789B976AA]
-	(No symbol) [0x00007FF789BE8763]
-	(No symbol) [0x00007FF789BE675D]
-	(No symbol) [0x00007FF789BE3F5C]
-	(No symbol) [0x00007FF789BE2D15]
-	(No symbol) [0x00007FF789BD687F]
-	(No symbol) [0x00007FF789C05E7A]
-	(No symbol) [0x00007FF789BD6226]
-	(No symbol) [0x00007FF789C06320]
-	(No symbol) [0x00007FF789C22786]
-	(No symbol) [0x00007FF789C05C23]
-	(No symbol) [0x00007FF789BD4A45]
-	(No symbol) [0x00007FF789BD5AD4]
-	GetHandleVerifier [0x00007FF78A0FD5EB+3695675]
-	GetHandleVerifier [0x00007FF78A1561C7+4059159]
-	GetHandleVerifier [0x00007FF78A14DF93+4025827]
-	GetHandleVerifier [0x00007FF789E1F059+687785]
-	(No symbol) [0x00007FF789CFB538]
-	(No symbol) [0x00007FF789CF7594]
-	(No symbol) [0x00007FF789CF7719]
-	(No symbol) [0x00007FF789CE80C4]
-	BaseThreadInitThunk [0x00007FF8856E3034+20]
-	RtlUserThreadStart [0x00007FF8859F1551+33]
-</status>
+<status status="PASS" start="2025-11-24T20:59:17.484987" elapsed="0.396636"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${signUpUsername}</arg>
 <arg>timeout=80</arg>
 <arg>error=logInButtonNotFound</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="NOT RUN" start="2025-11-24T20:15:38.561640" elapsed="0.000071"/>
+<status status="PASS" start="2025-11-24T20:59:17.881877" elapsed="0.239519"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-24T20:59:19.122806" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:15:38.561833" elapsed="0.000029"/>
+<status status="PASS" start="2025-11-24T20:59:18.121886" elapsed="1.001087"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-24T20:59:19.123754" level="INFO">Typing text 'amanTest1' into text field '//*[@id="sign-username"]'.</msg>
 <arg>${signUpUsername}</arg>
 <arg>${login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:15:38.562015" elapsed="0.000027"/>
+<status status="PASS" start="2025-11-24T20:59:19.123236" elapsed="0.689240"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-24T20:59:21.813934" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:15:38.562135" elapsed="0.000025"/>
+<status status="PASS" start="2025-11-24T20:59:19.812862" elapsed="2.001323"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-11-24T20:59:21.815338" level="INFO">Typing password into text field '//*[@id="sign-password"]'.</msg>
+<msg time="2025-11-24T20:59:22.159924" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${signUpPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:15:38.562254" elapsed="0.000024"/>
+<status status="PASS" start="2025-11-24T20:59:21.814627" elapsed="0.551430"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-24T20:59:24.369138" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:15:38.562365" elapsed="0.000033"/>
+<status status="PASS" start="2025-11-24T20:59:22.366543" elapsed="2.002930"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-24T20:59:24.370762" level="INFO">Clicking element '//*[@id="signInModal"]/div/div/div[3]/button[2]'.</msg>
 <arg>${signUpFormButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:15:38.562526" elapsed="0.000026"/>
+<status status="PASS" start="2025-11-24T20:59:24.370059" elapsed="0.364119"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-24T20:59:27.735174" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:15:38.562638" elapsed="0.000024"/>
+<status status="PASS" start="2025-11-24T20:59:24.734538" elapsed="3.000854"/>
 </kw>
 <arg>@{CHROME_CONFIG}</arg>
-<status status="FAIL" start="2025-11-24T20:15:16.928736" elapsed="21.634187">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="signin2" data-toggle="modal" data-target="#signInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (363, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF789D84D32+56194]
-	(No symbol) [0x00007FF789CF04E2]
-	(No symbol) [0x00007FF789B976AA]
-	(No symbol) [0x00007FF789BE8763]
-	(No symbol) [0x00007FF789BE675D]
-	(No symbol) [0x00007FF789BE3F5C]
-	(No symbol) [0x00007FF789BE2D15]
-	(No symbol) [0x00007FF789BD687F]
-	(No symbol) [0x00007FF789C05E7A]
-	(No symbol) [0x00007FF789BD6226]
-	(No symbol) [0x00007FF789C06320]
-	(No symbol) [0x00007FF789C22786]
-	(No symbol) [0x00007FF789C05C23]
-	(No symbol) [0x00007FF789BD4A45]
-	(No symbol) [0x00007FF789BD5AD4]
-	GetHandleVerifier [0x00007FF78A0FD5EB+3695675]
-	GetHandleVerifier [0x00007FF78A1561C7+4059159]
-	GetHandleVerifier [0x00007FF78A14DF93+4025827]
-	GetHandleVerifier [0x00007FF789E1F059+687785]
-	(No symbol) [0x00007FF789CFB538]
-	(No symbol) [0x00007FF789CF7594]
-	(No symbol) [0x00007FF789CF7719]
-	(No symbol) [0x00007FF789CE80C4]
-	BaseThreadInitThunk [0x00007FF8856E3034+20]
-	RtlUserThreadStart [0x00007FF8859F1551+33]
-</status>
+<status status="PASS" start="2025-11-24T20:59:01.277679" elapsed="26.457926"/>
 </kw>
 <kw name="Close Browser" owner="resources">
-<status status="NOT RUN" start="2025-11-24T20:15:38.563689" elapsed="0.000076"/>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-24T20:59:27.737011" elapsed="1.076143"/>
+</kw>
+<status status="PASS" start="2025-11-24T20:59:27.736350" elapsed="1.076916"/>
 </kw>
 <tag>chrome</tag>
-<status status="FAIL" start="2025-11-24T20:15:16.928385" elapsed="21.635874">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="signin2" data-toggle="modal" data-target="#signInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (363, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF789D84D32+56194]
-	(No symbol) [0x00007FF789CF04E2]
-	(No symbol) [0x00007FF789B976AA]
-	(No symbol) [0x00007FF789BE8763]
-	(No symbol) [0x00007FF789BE675D]
-	(No symbol) [0x00007FF789BE3F5C]
-	(No symbol) [0x00007FF789BE2D15]
-	(No symbol) [0x00007FF789BD687F]
-	(No symbol) [0x00007FF789C05E7A]
-	(No symbol) [0x00007FF789BD6226]
-	(No symbol) [0x00007FF789C06320]
-	(No symbol) [0x00007FF789C22786]
-	(No symbol) [0x00007FF789C05C23]
-	(No symbol) [0x00007FF789BD4A45]
-	(No symbol) [0x00007FF789BD5AD4]
-	GetHandleVerifier [0x00007FF78A0FD5EB+3695675]
-	GetHandleVerifier [0x00007FF78A1561C7+4059159]
-	GetHandleVerifier [0x00007FF78A14DF93+4025827]
-	GetHandleVerifier [0x00007FF789E1F059+687785]
-	(No symbol) [0x00007FF789CFB538]
-	(No symbol) [0x00007FF789CF7594]
-	(No symbol) [0x00007FF789CF7719]
-	(No symbol) [0x00007FF789CE80C4]
-	BaseThreadInitThunk [0x00007FF8856E3034+20]
-	RtlUserThreadStart [0x00007FF8859F1551+33]
-</status>
+<status status="PASS" start="2025-11-24T20:59:01.277356" elapsed="27.536092"/>
 </test>
 <test id="s1-t2" name="TC1_SIGN_UP_SAFARI" line="17">
 <kw name="Sign Up" owner="resources">
 <kw name="Open Test Browser" owner="resources">
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:15:38.567215" level="INFO">${ENV_BS} = True</msg>
+<msg time="2025-11-24T20:59:28.814662" level="INFO">${ENV_BS} = True</msg>
 <var>${ENV_BS}</var>
 <arg>BROWSERSTACK</arg>
 <arg>default=${BROWSERSTACK}</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:15:38.566918" elapsed="0.000335"/>
+<status status="PASS" start="2025-11-24T20:59:28.814505" elapsed="0.000175"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Open BrowserStack Browser" owner="resources">
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:15:38.569616" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
+<msg time="2025-11-24T20:59:28.815187" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
 <var>${BS_USER}</var>
 <arg>BROWSERSTACK_USERNAME</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:15:38.568152" elapsed="0.001506"/>
+<status status="PASS" start="2025-11-24T20:59:28.815117" elapsed="0.000084"/>
 </kw>
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:15:38.569938" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
+<msg time="2025-11-24T20:59:28.815933" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
 <var>${BS_KEY}</var>
 <arg>BROWSERSTACK_ACCESS_KEY</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:15:38.569790" elapsed="0.000176"/>
+<status status="PASS" start="2025-11-24T20:59:28.815249" elapsed="0.000700"/>
 </kw>
 <kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:15:38.570251" level="INFO">Length is 20.</msg>
+<msg time="2025-11-24T20:59:28.816098" level="INFO">Length is 20.</msg>
 <arg>${BS_USER}</arg>
 <arg>BrowserStack username not set</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:15:38.570101" elapsed="0.000199"/>
+<status status="PASS" start="2025-11-24T20:59:28.816001" elapsed="0.000119"/>
 </kw>
 <kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:15:38.570508" level="INFO">Length is 20.</msg>
+<msg time="2025-11-24T20:59:28.816226" level="INFO">Length is 20.</msg>
 <arg>${BS_KEY}</arg>
 <arg>BrowserStack access key not set</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:15:38.570391" elapsed="0.000156"/>
+<status status="PASS" start="2025-11-24T20:59:28.816167" elapsed="0.000080"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-24T20:15:38.570811" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
+<msg time="2025-11-24T20:59:28.816377" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
 <var>${REMOTE_URL}</var>
 <arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-24T20:15:38.570642" elapsed="0.000195"/>
+<status status="PASS" start="2025-11-24T20:59:28.816295" elapsed="0.000095"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Open BrowserStack Safari" owner="resources">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-24T20:15:38.571930" level="INFO">${safari_options} = &lt;selenium.webdriver.safari.options.Options object at 0x106224ec0&gt;</msg>
+<msg time="2025-11-24T20:59:28.816940" level="INFO">${safari_options} = &lt;selenium.webdriver.safari.options.Options object at 0x104e24ec0&gt;</msg>
 <var>${safari_options}</var>
 <arg>sys.modules['selenium.webdriver'].SafariOptions()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-24T20:15:38.571648" elapsed="0.000311"/>
+<status status="PASS" start="2025-11-24T20:59:28.816774" elapsed="0.000181"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T20:15:38.572423" level="INFO">&amp;{bstack_options} = { os=OS X | osVersion=Monterey | browserVersion=15.6 | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
+<msg time="2025-11-24T20:59:28.817181" level="INFO">&amp;{bstack_options} = { os=OS X | osVersion=Monterey | browserVersion=15.6 | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
 <var>&amp;{bstack_options}</var>
 <arg>os=${os}</arg>
 <arg>osVersion=${os_version}</arg>
@@ -403,7 +311,7 @@ Stacktrace:
 <arg>sessionName=Robot Framework Test</arg>
 <arg>seleniumVersion=4.0.0</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T20:15:38.572080" elapsed="0.000372"/>
+<status status="PASS" start="2025-11-24T20:59:28.817005" elapsed="0.000191"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${safari_options}</arg>
@@ -411,22 +319,26 @@ Stacktrace:
 <arg>bstack:options</arg>
 <arg>${bstack_options}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-24T20:15:38.572561" elapsed="0.000138"/>
+<status status="PASS" start="2025-11-24T20:59:28.817249" elapsed="0.000073"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:15:38.573114" level="INFO">Opening browser 'Safari' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-11-24T20:59:28.817538" level="INFO">Opening browser 'Safari' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
 <arg>${baseUrl}</arg>
 <arg>Safari</arg>
 <arg>remote_url=${remote_url}</arg>
 <arg>options=${safari_options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-24T20:15:38.572820" elapsed="22.078894"/>
+<status status="PASS" start="2025-11-24T20:59:28.817388" elapsed="10.335240"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-24T20:59:39.153608" elapsed="0.145127"/>
 </kw>
 <arg>${REMOTE_URL}</arg>
 <arg>${os}</arg>
 <arg>${os_version}</arg>
 <arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:15:38.571332" elapsed="22.081603"/>
+<status status="PASS" start="2025-11-24T20:59:28.816625" elapsed="10.482702"/>
 </kw>
 <arg>'${browser}'=='Chrome'</arg>
 <arg>Open BrowserStack Chrome</arg>
@@ -452,13 +364,13 @@ Stacktrace:
 <arg>Fail</arg>
 <arg>Unsupported browser: ${browser}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:15:38.570937" elapsed="22.082328"/>
+<status status="PASS" start="2025-11-24T20:59:28.816443" elapsed="10.483182"/>
 </kw>
 <arg>${browser}</arg>
 <arg>${os}</arg>
 <arg>${os_version}</arg>
 <arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:15:38.567821" elapsed="22.085755"/>
+<status status="PASS" start="2025-11-24T20:59:28.814962" elapsed="10.484927"/>
 </kw>
 <arg>'${ENV_BS}'=='True'</arg>
 <arg>Open BrowserStack Browser</arg>
@@ -471,158 +383,164 @@ Stacktrace:
 <arg>${baseUrl}</arg>
 <arg>${browser}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:15:38.567413" elapsed="22.086322"/>
+<status status="PASS" start="2025-11-24T20:59:28.814748" elapsed="10.485283"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${ENV_BS}'=='False'</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-24T20:59:39.300489" elapsed="0.000496"/>
 </kw>
 <arg>${browser}</arg>
 <arg>${os}</arg>
 <arg>${os_version}</arg>
 <arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:15:38.566500" elapsed="22.087436"/>
+<status status="PASS" start="2025-11-24T20:59:28.814307" elapsed="10.486766"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${signUpButton}</arg>
 <arg>timeout=80</arg>
 <arg>error=logInButtonNotFound</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:16:00.654953" elapsed="0.585511"/>
+<status status="PASS" start="2025-11-24T20:59:39.301262" elapsed="0.137213"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:16:02.242165" level="INFO">Slept 1 second.</msg>
+<msg time="2025-11-24T20:59:40.441364" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:16:01.240884" elapsed="1.001876"/>
+<status status="PASS" start="2025-11-24T20:59:39.438961" elapsed="1.003059"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:16:02.244566" level="INFO">Clicking element '//*[@id="signin2"]'.</msg>
+<msg time="2025-11-24T20:59:40.442778" level="INFO">Clicking element '//*[@id="signin2"]'.</msg>
 <arg>${signUpButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:16:02.243223" elapsed="0.830406"/>
+<status status="PASS" start="2025-11-24T20:59:40.442393" elapsed="0.285110"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${signUpUsername}</arg>
 <arg>timeout=80</arg>
 <arg>error=logInButtonNotFound</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:16:03.073872" elapsed="0.437736"/>
+<status status="PASS" start="2025-11-24T20:59:40.727876" elapsed="0.129559"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:16:04.514079" level="INFO">Slept 1 second.</msg>
+<msg time="2025-11-24T20:59:41.858892" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:16:03.511848" elapsed="1.002485"/>
+<status status="PASS" start="2025-11-24T20:59:40.857709" elapsed="1.001460"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:16:04.515349" level="INFO">Typing text 'amanTest1' into text field '//*[@id="sign-username"]'.</msg>
+<msg time="2025-11-24T20:59:41.860178" level="INFO">Typing text 'amanTest1' into text field '//*[@id="sign-username"]'.</msg>
 <arg>${signUpUsername}</arg>
 <arg>${login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:16:04.514794" elapsed="1.235312"/>
+<status status="PASS" start="2025-11-24T20:59:41.859567" elapsed="0.489445"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:16:07.753086" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-11-24T20:59:44.351848" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:16:05.750401" elapsed="2.003489"/>
+<status status="PASS" start="2025-11-24T20:59:42.349390" elapsed="2.002664"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:16:07.755661" level="INFO">Typing password into text field '//*[@id="sign-password"]'.</msg>
-<msg time="2025-11-24T20:16:08.454387" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-11-24T20:59:44.352760" level="INFO">Typing password into text field '//*[@id="sign-password"]'.</msg>
+<msg time="2025-11-24T20:59:44.619766" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${signUpPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:16:07.754333" elapsed="1.036950"/>
+<status status="PASS" start="2025-11-24T20:59:44.352341" elapsed="0.466304"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:16:10.792943" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-11-24T20:59:46.820778" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:16:08.791832" elapsed="2.001388"/>
+<status status="PASS" start="2025-11-24T20:59:44.818902" elapsed="2.002608"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:16:10.794175" level="INFO">Clicking element '//*[@id="signInModal"]/div/div/div[3]/button[2]'.</msg>
+<msg time="2025-11-24T20:59:46.822738" level="INFO">Clicking element '//*[@id="signInModal"]/div/div/div[3]/button[2]'.</msg>
 <arg>${signUpFormButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:16:10.793628" elapsed="0.817306"/>
+<status status="PASS" start="2025-11-24T20:59:46.821988" elapsed="0.324209"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:16:14.613122" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-11-24T20:59:50.147751" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:16:11.611612" elapsed="3.001886"/>
+<status status="PASS" start="2025-11-24T20:59:47.146687" elapsed="3.001418"/>
 </kw>
 <arg>@{SAFARI_CONFIG}</arg>
-<status status="PASS" start="2025-11-24T20:15:38.565964" elapsed="36.047810"/>
+<status status="PASS" start="2025-11-24T20:59:28.814076" elapsed="21.334310"/>
 </kw>
 <kw name="Close Browser" owner="resources">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-11-24T20:16:14.615618" elapsed="3.528258"/>
+<status status="PASS" start="2025-11-24T20:59:50.150188" elapsed="1.385254"/>
 </kw>
-<status status="PASS" start="2025-11-24T20:16:14.614772" elapsed="3.529522"/>
+<status status="PASS" start="2025-11-24T20:59:50.149365" elapsed="1.386240"/>
 </kw>
 <tag>safari</tag>
-<status status="PASS" start="2025-11-24T20:15:38.565014" elapsed="39.579925"/>
+<status status="PASS" start="2025-11-24T20:59:28.813711" elapsed="22.722210"/>
 </test>
 <test id="s1-t3" name="TC1_SIGN_UP_EDGE" line="22">
 <kw name="Sign Up" owner="resources">
 <kw name="Open Test Browser" owner="resources">
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:16:18.148344" level="INFO">${ENV_BS} = True</msg>
+<msg time="2025-11-24T20:59:51.538052" level="INFO">${ENV_BS} = True</msg>
 <var>${ENV_BS}</var>
 <arg>BROWSERSTACK</arg>
 <arg>default=${BROWSERSTACK}</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:16:18.147947" elapsed="0.000448"/>
+<status status="PASS" start="2025-11-24T20:59:51.537797" elapsed="0.000286"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Open BrowserStack Browser" owner="resources">
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:16:18.149470" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
+<msg time="2025-11-24T20:59:51.538989" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
 <var>${BS_USER}</var>
 <arg>BROWSERSTACK_USERNAME</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:16:18.149340" elapsed="0.000159"/>
+<status status="PASS" start="2025-11-24T20:59:51.538821" elapsed="0.000199"/>
 </kw>
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:16:18.149709" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
+<msg time="2025-11-24T20:59:51.539222" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
 <var>${BS_KEY}</var>
 <arg>BROWSERSTACK_ACCESS_KEY</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:16:18.149596" elapsed="0.000140"/>
+<status status="PASS" start="2025-11-24T20:59:51.539116" elapsed="0.000130"/>
 </kw>
 <kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:16:18.150052" level="INFO">Length is 20.</msg>
+<msg time="2025-11-24T20:59:51.539550" level="INFO">Length is 20.</msg>
 <arg>${BS_USER}</arg>
 <arg>BrowserStack username not set</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:16:18.149855" elapsed="0.000242"/>
+<status status="PASS" start="2025-11-24T20:59:51.539369" elapsed="0.000221"/>
 </kw>
 <kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:16:18.150316" level="INFO">Length is 20.</msg>
+<msg time="2025-11-24T20:59:51.539775" level="INFO">Length is 20.</msg>
 <arg>${BS_KEY}</arg>
 <arg>BrowserStack access key not set</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:16:18.150191" elapsed="0.000167"/>
+<status status="PASS" start="2025-11-24T20:59:51.539671" elapsed="0.000157"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-24T20:16:18.150789" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
+<msg time="2025-11-24T20:59:51.540104" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
 <var>${REMOTE_URL}</var>
 <arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-24T20:16:18.150513" elapsed="0.000314"/>
+<status status="PASS" start="2025-11-24T20:59:51.539917" elapsed="0.000315"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Open BrowserStack Edge" owner="resources">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-24T20:16:18.155696" level="INFO">${edge_options} = &lt;selenium.webdriver.edge.options.Options object at 0x10639c1a0&gt;</msg>
+<msg time="2025-11-24T20:59:51.541313" level="INFO">${edge_options} = &lt;selenium.webdriver.edge.options.Options object at 0x1055df770&gt;</msg>
 <var>${edge_options}</var>
 <arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-24T20:16:18.154837" elapsed="0.000902"/>
+<status status="PASS" start="2025-11-24T20:59:51.541034" elapsed="0.000467"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T20:16:18.156328" level="INFO">&amp;{bstack_options} = { os=Windows | osVersion=10 | browserVersion=latest | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
+<msg time="2025-11-24T20:59:51.542609" level="INFO">&amp;{bstack_options} = { os=Windows | osVersion=10 | browserVersion=latest | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
 <var>&amp;{bstack_options}</var>
 <arg>os=${os}</arg>
 <arg>osVersion=${os_version}</arg>
@@ -632,7 +550,7 @@ Stacktrace:
 <arg>sessionName=Robot Framework Test</arg>
 <arg>seleniumVersion=4.0.0</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T20:16:18.155912" elapsed="0.000447"/>
+<status status="PASS" start="2025-11-24T20:59:51.541619" elapsed="0.001026"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${edge_options}</arg>
@@ -640,22 +558,26 @@ Stacktrace:
 <arg>bstack:options</arg>
 <arg>${bstack_options}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-24T20:16:18.156498" elapsed="0.000325"/>
+<status status="PASS" start="2025-11-24T20:59:51.542760" elapsed="0.000171"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:16:18.157566" level="INFO">Opening browser 'Edge' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-11-24T20:59:51.543615" level="INFO">Opening browser 'Edge' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
 <arg>${baseUrl}</arg>
 <arg>Edge</arg>
 <arg>remote_url=${remote_url}</arg>
 <arg>options=${edge_options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-24T20:16:18.157108" elapsed="15.749930"/>
+<status status="PASS" start="2025-11-24T20:59:51.543116" elapsed="13.377597"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-24T21:00:04.921683" elapsed="0.662623"/>
 </kw>
 <arg>${REMOTE_URL}</arg>
 <arg>${os}</arg>
 <arg>${os_version}</arg>
 <arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:16:18.151699" elapsed="15.756732"/>
+<status status="PASS" start="2025-11-24T20:59:51.540736" elapsed="14.043905"/>
 </kw>
 <arg>'${browser}'=='Chrome'</arg>
 <arg>Open BrowserStack Chrome</arg>
@@ -681,13 +603,13 @@ Stacktrace:
 <arg>Fail</arg>
 <arg>Unsupported browser: ${browser}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:16:18.150959" elapsed="15.757629"/>
+<status status="PASS" start="2025-11-24T20:59:51.540340" elapsed="14.044562"/>
 </kw>
 <arg>${browser}</arg>
 <arg>${os}</arg>
 <arg>${os_version}</arg>
 <arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:16:18.149008" elapsed="15.759780"/>
+<status status="PASS" start="2025-11-24T20:59:51.538539" elapsed="14.046734"/>
 </kw>
 <arg>'${ENV_BS}'=='True'</arg>
 <arg>Open BrowserStack Browser</arg>
@@ -700,268 +622,164 @@ Stacktrace:
 <arg>${baseUrl}</arg>
 <arg>${browser}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:16:18.148587" elapsed="15.760286"/>
+<status status="PASS" start="2025-11-24T20:59:51.538202" elapsed="14.047218"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${ENV_BS}'=='False'</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-24T21:00:05.585877" elapsed="0.000656"/>
 </kw>
 <arg>${browser}</arg>
 <arg>${os}</arg>
 <arg>${os_version}</arg>
 <arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:16:18.147430" elapsed="15.761620"/>
+<status status="PASS" start="2025-11-24T20:59:51.537396" elapsed="14.049307"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${signUpButton}</arg>
 <arg>timeout=80</arg>
 <arg>error=logInButtonNotFound</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:16:33.909663" elapsed="0.224949"/>
+<status status="PASS" start="2025-11-24T21:00:05.587011" elapsed="0.211187"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:16:35.139254" level="INFO">Slept 1 second.</msg>
+<msg time="2025-11-24T21:00:06.801372" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:16:34.137738" elapsed="1.001729"/>
+<status status="PASS" start="2025-11-24T21:00:05.798712" elapsed="1.002998"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:16:35.140416" level="INFO">Clicking element '//*[@id="signin2"]'.</msg>
-<msg time="2025-11-24T20:16:37.512658" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-24T20:16:37.513328" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="signin2" data-toggle="modal" data-target="#signInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (363, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff69caf9a65
-	0x7ff69caf9ac4
-	0x7ff69ccab8a8
-	0x7ff69c8b9c7c
-	0x7ff69c8b8291
-	0x7ff69c8b61c9
-	0x7ff69c8b56c5
-	0x7ff69c8ab95e
-	0x7ff69c8d3c8a
-	0x7ff69c8ab3d5
-	0x7ff69c8ab2ed
-	0x7ff69c8ab3d5
-	0x7ff69c8ee6f2
-	0x7ff69c8aa8aa
-	0x7ff69c8a9bd1
-	0x7ff69c8aa6d3
-	0x7ff69c9665f4
-	0x7ff69c962b17
-	0x7ff69cb266c5
-	0x7ff69cb14b21
-	0x7ff69cb1cfc9
-	0x7ff69cb00fb4
-	0x7ff69cb01103
-	0x7ff69caeee36
-	0x7ffdf4ea7bd4
-	0x7ffdf5e8ced1
-</msg>
+<msg time="2025-11-24T21:00:06.802908" level="INFO">Clicking element '//*[@id="signin2"]'.</msg>
 <arg>${signUpButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-11-24T20:16:35.139868" elapsed="2.375944">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="signin2" data-toggle="modal" data-target="#signInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (363, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff69caf9a65
-	0x7ff69caf9ac4
-	0x7ff69ccab8a8
-	0x7ff69c8b9c7c
-	0x7ff69c8b8291
-	0x7ff69c8b61c9
-	0x7ff69c8b56c5
-	0x7ff69c8ab95e
-	0x7ff69c8d3c8a
-	0x7ff69c8ab3d5
-	0x7ff69c8ab2ed
-	0x7ff69c8ab3d5
-	0x7ff69c8ee6f2
-	0x7ff69c8aa8aa
-	0x7ff69c8a9bd1
-	0x7ff69c8aa6d3
-	0x7ff69c9665f4
-	0x7ff69c962b17
-	0x7ff69cb266c5
-	0x7ff69cb14b21
-	0x7ff69cb1cfc9
-	0x7ff69cb00fb4
-	0x7ff69cb01103
-	0x7ff69caeee36
-	0x7ffdf4ea7bd4
-	0x7ffdf5e8ced1
-</status>
+<status status="PASS" start="2025-11-24T21:00:06.802212" elapsed="0.444852"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${signUpUsername}</arg>
 <arg>timeout=80</arg>
 <arg>error=logInButtonNotFound</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="NOT RUN" start="2025-11-24T20:16:37.516169" elapsed="0.000052"/>
+<status status="PASS" start="2025-11-24T21:00:07.247585" elapsed="0.174847"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-24T21:00:08.424845" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:16:37.516341" elapsed="0.000027"/>
+<status status="PASS" start="2025-11-24T21:00:07.422940" elapsed="1.002245"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-24T21:00:08.426446" level="INFO">Typing text 'amanTest1' into text field '//*[@id="sign-username"]'.</msg>
 <arg>${signUpUsername}</arg>
 <arg>${login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:16:37.516495" elapsed="0.000026"/>
+<status status="PASS" start="2025-11-24T21:00:08.425701" elapsed="0.593357"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-24T21:00:11.021246" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:16:37.516610" elapsed="0.000024"/>
+<status status="PASS" start="2025-11-24T21:00:09.019534" elapsed="2.001949"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-11-24T21:00:11.022461" level="INFO">Typing password into text field '//*[@id="sign-password"]'.</msg>
+<msg time="2025-11-24T21:00:11.360431" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${signUpPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:16:37.516728" elapsed="0.000024"/>
+<status status="PASS" start="2025-11-24T21:00:11.021867" elapsed="0.574412"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-24T21:00:13.598518" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:16:37.516837" elapsed="0.000023"/>
+<status status="PASS" start="2025-11-24T21:00:11.596833" elapsed="2.001977"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-24T21:00:13.599806" level="INFO">Clicking element '//*[@id="signInModal"]/div/div/div[3]/button[2]'.</msg>
 <arg>${signUpFormButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:16:37.516951" elapsed="0.000023"/>
+<status status="PASS" start="2025-11-24T21:00:13.599235" elapsed="0.486985"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-24T21:00:17.087429" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:16:37.517054" elapsed="0.000023"/>
+<status status="PASS" start="2025-11-24T21:00:14.086337" elapsed="3.001430"/>
 </kw>
 <arg>@{EDGE_CONFIG}</arg>
-<status status="FAIL" start="2025-11-24T20:16:18.146778" elapsed="19.370518">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="signin2" data-toggle="modal" data-target="#signInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (363, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff69caf9a65
-	0x7ff69caf9ac4
-	0x7ff69ccab8a8
-	0x7ff69c8b9c7c
-	0x7ff69c8b8291
-	0x7ff69c8b61c9
-	0x7ff69c8b56c5
-	0x7ff69c8ab95e
-	0x7ff69c8d3c8a
-	0x7ff69c8ab3d5
-	0x7ff69c8ab2ed
-	0x7ff69c8ab3d5
-	0x7ff69c8ee6f2
-	0x7ff69c8aa8aa
-	0x7ff69c8a9bd1
-	0x7ff69c8aa6d3
-	0x7ff69c9665f4
-	0x7ff69c962b17
-	0x7ff69cb266c5
-	0x7ff69cb14b21
-	0x7ff69cb1cfc9
-	0x7ff69cb00fb4
-	0x7ff69cb01103
-	0x7ff69caeee36
-	0x7ffdf4ea7bd4
-	0x7ffdf5e8ced1
-</status>
+<status status="PASS" start="2025-11-24T20:59:51.536961" elapsed="25.551312"/>
 </kw>
 <kw name="Close Browser" owner="resources">
-<status status="NOT RUN" start="2025-11-24T20:16:37.517951" elapsed="0.000087"/>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-24T21:00:17.089911" elapsed="1.499386"/>
+</kw>
+<status status="PASS" start="2025-11-24T21:00:17.089093" elapsed="1.500449"/>
 </kw>
 <tag>edge</tag>
-<status status="FAIL" start="2025-11-24T20:16:18.145729" elapsed="19.372682">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="signin2" data-toggle="modal" data-target="#signInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (363, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff69caf9a65
-	0x7ff69caf9ac4
-	0x7ff69ccab8a8
-	0x7ff69c8b9c7c
-	0x7ff69c8b8291
-	0x7ff69c8b61c9
-	0x7ff69c8b56c5
-	0x7ff69c8ab95e
-	0x7ff69c8d3c8a
-	0x7ff69c8ab3d5
-	0x7ff69c8ab2ed
-	0x7ff69c8ab3d5
-	0x7ff69c8ee6f2
-	0x7ff69c8aa8aa
-	0x7ff69c8a9bd1
-	0x7ff69c8aa6d3
-	0x7ff69c9665f4
-	0x7ff69c962b17
-	0x7ff69cb266c5
-	0x7ff69cb14b21
-	0x7ff69cb1cfc9
-	0x7ff69cb00fb4
-	0x7ff69cb01103
-	0x7ff69caeee36
-	0x7ffdf4ea7bd4
-	0x7ffdf5e8ced1
-</status>
+<status status="PASS" start="2025-11-24T20:59:51.536437" elapsed="27.053466"/>
 </test>
 <test id="s1-t4" name="TC2_LOGIN_CHROME" line="27">
 <kw name="Log in" owner="resources">
 <kw name="Open Test Browser" owner="resources">
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:16:37.521468" level="INFO">${ENV_BS} = True</msg>
+<msg time="2025-11-24T21:00:18.592558" level="INFO">${ENV_BS} = True</msg>
 <var>${ENV_BS}</var>
 <arg>BROWSERSTACK</arg>
 <arg>default=${BROWSERSTACK}</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:16:37.521162" elapsed="0.000356"/>
+<status status="PASS" start="2025-11-24T21:00:18.592212" elapsed="0.000388"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Open BrowserStack Browser" owner="resources">
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:16:37.522719" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
+<msg time="2025-11-24T21:00:18.593643" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
 <var>${BS_USER}</var>
 <arg>BROWSERSTACK_USERNAME</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:16:37.522585" elapsed="0.000167"/>
+<status status="PASS" start="2025-11-24T21:00:18.593513" elapsed="0.000162"/>
 </kw>
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:16:37.523218" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
+<msg time="2025-11-24T21:00:18.593914" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
 <var>${BS_KEY}</var>
 <arg>BROWSERSTACK_ACCESS_KEY</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:16:37.522851" elapsed="0.000400"/>
+<status status="PASS" start="2025-11-24T21:00:18.593783" elapsed="0.000158"/>
 </kw>
 <kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:16:37.523591" level="INFO">Length is 20.</msg>
+<msg time="2025-11-24T21:00:18.594244" level="INFO">Length is 20.</msg>
 <arg>${BS_USER}</arg>
 <arg>BrowserStack username not set</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:16:37.523385" elapsed="0.000277"/>
+<status status="PASS" start="2025-11-24T21:00:18.594041" elapsed="0.000246"/>
 </kw>
 <kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:16:37.524216" level="INFO">Length is 20.</msg>
+<msg time="2025-11-24T21:00:18.594521" level="INFO">Length is 20.</msg>
 <arg>${BS_KEY}</arg>
 <arg>BrowserStack access key not set</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:16:37.523934" elapsed="0.000351"/>
+<status status="PASS" start="2025-11-24T21:00:18.594391" elapsed="0.000171"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-24T20:16:37.524775" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
+<msg time="2025-11-24T21:00:18.594850" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
 <var>${REMOTE_URL}</var>
 <arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-24T20:16:37.524440" elapsed="0.000384"/>
+<status status="PASS" start="2025-11-24T21:00:18.594690" elapsed="0.000187"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Open BrowserStack Chrome" owner="resources">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-24T20:16:37.526200" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x106cc0050&gt;</msg>
+<msg time="2025-11-24T21:00:18.595974" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x1055fa710&gt;</msg>
 <var>${chrome_options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-24T20:16:37.525863" elapsed="0.000374"/>
+<status status="PASS" start="2025-11-24T21:00:18.595635" elapsed="0.000367"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T20:16:37.526779" level="INFO">&amp;{bstack_options} = { os=Windows | osVersion=10 | browserVersion=120.0 | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
+<msg time="2025-11-24T21:00:18.596474" level="INFO">&amp;{bstack_options} = { os=Windows | osVersion=10 | browserVersion=120.0 | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
 <var>&amp;{bstack_options}</var>
 <arg>os=${os}</arg>
 <arg>osVersion=${os_version}</arg>
@@ -971,7 +789,7 @@ Symbols not available. Dumping unresolved backtrace:
 <arg>sessionName=Robot Framework Test</arg>
 <arg>seleniumVersion=4.0.0</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T20:16:37.526372" elapsed="0.000443"/>
+<status status="PASS" start="2025-11-24T21:00:18.596116" elapsed="0.000454"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${chrome_options}</arg>
@@ -979,22 +797,27 @@ Symbols not available. Dumping unresolved backtrace:
 <arg>bstack:options</arg>
 <arg>${bstack_options}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-24T20:16:37.526946" elapsed="0.000171"/>
+<status status="PASS" start="2025-11-24T21:00:18.596710" elapsed="0.000193"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:16:37.527663" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-11-24T21:00:18.597600" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-11-24T21:00:20.174711" level="INFO">Cannot capture screenshot because no browser is open.</msg>
 <arg>${baseUrl}</arg>
 <arg>Chrome</arg>
 <arg>remote_url=${remote_url}</arg>
 <arg>options=${chrome_options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-24T20:16:37.527274" elapsed="27.686989"/>
+<status status="FAIL" start="2025-11-24T21:00:18.597211" elapsed="1.577645">Execution terminated by signal</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-11-24T21:00:20.175098" elapsed="0.000045"/>
 </kw>
 <arg>${REMOTE_URL}</arg>
 <arg>${os}</arg>
 <arg>${os_version}</arg>
 <arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:16:37.525457" elapsed="27.689473"/>
+<status status="FAIL" start="2025-11-24T21:00:18.595295" elapsed="1.580028">Execution terminated by signal</status>
 </kw>
 <arg>'${browser}'=='Chrome'</arg>
 <arg>Open BrowserStack Chrome</arg>
@@ -1020,13 +843,13 @@ Symbols not available. Dumping unresolved backtrace:
 <arg>Fail</arg>
 <arg>Unsupported browser: ${browser}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:16:37.524997" elapsed="27.690134"/>
+<status status="FAIL" start="2025-11-24T21:00:18.594979" elapsed="1.580428">Execution terminated by signal</status>
 </kw>
 <arg>${browser}</arg>
 <arg>${os}</arg>
 <arg>${os_version}</arg>
 <arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:16:37.522192" elapsed="27.693163"/>
+<status status="FAIL" start="2025-11-24T21:00:18.593176" elapsed="1.582393">Execution terminated by signal</status>
 </kw>
 <arg>'${ENV_BS}'=='True'</arg>
 <arg>Open BrowserStack Browser</arg>
@@ -1039,2650 +862,146 @@ Symbols not available. Dumping unresolved backtrace:
 <arg>${baseUrl}</arg>
 <arg>${browser}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:16:37.521764" elapsed="27.693684"/>
+<status status="FAIL" start="2025-11-24T21:00:18.592759" elapsed="1.582883">Execution terminated by signal</status>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${ENV_BS}'=='False'</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" start="2025-11-24T21:00:20.175824" elapsed="0.000035"/>
 </kw>
 <arg>${browser}</arg>
 <arg>${os}</arg>
 <arg>${os_version}</arg>
 <arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:16:37.520714" elapsed="27.694862"/>
+<status status="FAIL" start="2025-11-24T21:00:18.591744" elapsed="1.584204">Execution terminated by signal</status>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${logInButton}</arg>
 <arg>timeout=80</arg>
 <arg>error=logInButtonNotFound</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:17:05.215854" elapsed="0.855724"/>
+<status status="NOT RUN" start="2025-11-24T21:00:20.176092" elapsed="0.000031"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:17:07.073929" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:17:06.071850" elapsed="1.002260"/>
+<status status="NOT RUN" start="2025-11-24T21:00:20.176227" elapsed="0.000027"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:17:07.074671" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
-<msg time="2025-11-24T20:17:09.541794" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-24T20:17:09.542044" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF7E5364D32+56194]
-	(No symbol) [0x00007FF7E52D04E2]
-	(No symbol) [0x00007FF7E51776AA]
-	(No symbol) [0x00007FF7E51C8763]
-	(No symbol) [0x00007FF7E51C675D]
-	(No symbol) [0x00007FF7E51C3F5C]
-	(No symbol) [0x00007FF7E51C2D15]
-	(No symbol) [0x00007FF7E51B687F]
-	(No symbol) [0x00007FF7E51E5E7A]
-	(No symbol) [0x00007FF7E51B6226]
-	(No symbol) [0x00007FF7E51E6320]
-	(No symbol) [0x00007FF7E5202786]
-	(No symbol) [0x00007FF7E51E5C23]
-	(No symbol) [0x00007FF7E51B4A45]
-	(No symbol) [0x00007FF7E51B5AD4]
-	GetHandleVerifier [0x00007FF7E56DD5EB+3695675]
-	GetHandleVerifier [0x00007FF7E57361C7+4059159]
-	GetHandleVerifier [0x00007FF7E572DF93+4025827]
-	GetHandleVerifier [0x00007FF7E53FF059+687785]
-	(No symbol) [0x00007FF7E52DB538]
-	(No symbol) [0x00007FF7E52D7594]
-	(No symbol) [0x00007FF7E52D7719]
-	(No symbol) [0x00007FF7E52C80C4]
-	BaseThreadInitThunk [0x00007FF9E3997BD4+20]
-	RtlUserThreadStart [0x00007FF9E4B2CED1+33]
-</msg>
 <arg>${logInButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-11-24T20:17:07.074358" elapsed="2.469308">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF7E5364D32+56194]
-	(No symbol) [0x00007FF7E52D04E2]
-	(No symbol) [0x00007FF7E51776AA]
-	(No symbol) [0x00007FF7E51C8763]
-	(No symbol) [0x00007FF7E51C675D]
-	(No symbol) [0x00007FF7E51C3F5C]
-	(No symbol) [0x00007FF7E51C2D15]
-	(No symbol) [0x00007FF7E51B687F]
-	(No symbol) [0x00007FF7E51E5E7A]
-	(No symbol) [0x00007FF7E51B6226]
-	(No symbol) [0x00007FF7E51E6320]
-	(No symbol) [0x00007FF7E5202786]
-	(No symbol) [0x00007FF7E51E5C23]
-	(No symbol) [0x00007FF7E51B4A45]
-	(No symbol) [0x00007FF7E51B5AD4]
-	GetHandleVerifier [0x00007FF7E56DD5EB+3695675]
-	GetHandleVerifier [0x00007FF7E57361C7+4059159]
-	GetHandleVerifier [0x00007FF7E572DF93+4025827]
-	GetHandleVerifier [0x00007FF7E53FF059+687785]
-	(No symbol) [0x00007FF7E52DB538]
-	(No symbol) [0x00007FF7E52D7594]
-	(No symbol) [0x00007FF7E52D7719]
-	(No symbol) [0x00007FF7E52C80C4]
-	BaseThreadInitThunk [0x00007FF9E3997BD4+20]
-	RtlUserThreadStart [0x00007FF9E4B2CED1+33]
-</status>
+<status status="NOT RUN" start="2025-11-24T21:00:20.176431" elapsed="0.000029"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${loginUsernameField}</arg>
 <arg>timeout=80</arg>
 <arg>error=logInButtonNotFound</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="NOT RUN" start="2025-11-24T20:17:09.543957" elapsed="0.000045"/>
+<status status="NOT RUN" start="2025-11-24T21:00:20.176569" elapsed="0.000027"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:17:09.544114" elapsed="0.000028"/>
+<status status="NOT RUN" start="2025-11-24T21:00:20.176693" elapsed="0.000027"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${loginUsernameField}</arg>
 <arg>${login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:17:09.544256" elapsed="0.000031"/>
+<status status="NOT RUN" start="2025-11-24T21:00:20.176839" elapsed="0.000027"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
 <arg>${loginPasswordField}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:17:09.544389" elapsed="0.000026"/>
+<status status="NOT RUN" start="2025-11-24T21:00:20.176969" elapsed="0.000026"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:17:09.544508" elapsed="0.000027"/>
+<status status="NOT RUN" start="2025-11-24T21:00:20.177095" elapsed="0.000028"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${logInFormButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:17:09.544642" elapsed="0.000058"/>
+<status status="NOT RUN" start="2025-11-24T21:00:20.177224" elapsed="0.000027"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:17:09.544827" elapsed="0.000033"/>
+<status status="NOT RUN" start="2025-11-24T21:00:20.177344" elapsed="0.000028"/>
 </kw>
 <arg>@{CHROME_CONFIG}</arg>
-<status status="FAIL" start="2025-11-24T20:16:37.520059" elapsed="32.024963">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF7E5364D32+56194]
-	(No symbol) [0x00007FF7E52D04E2]
-	(No symbol) [0x00007FF7E51776AA]
-	(No symbol) [0x00007FF7E51C8763]
-	(No symbol) [0x00007FF7E51C675D]
-	(No symbol) [0x00007FF7E51C3F5C]
-	(No symbol) [0x00007FF7E51C2D15]
-	(No symbol) [0x00007FF7E51B687F]
-	(No symbol) [0x00007FF7E51E5E7A]
-	(No symbol) [0x00007FF7E51B6226]
-	(No symbol) [0x00007FF7E51E6320]
-	(No symbol) [0x00007FF7E5202786]
-	(No symbol) [0x00007FF7E51E5C23]
-	(No symbol) [0x00007FF7E51B4A45]
-	(No symbol) [0x00007FF7E51B5AD4]
-	GetHandleVerifier [0x00007FF7E56DD5EB+3695675]
-	GetHandleVerifier [0x00007FF7E57361C7+4059159]
-	GetHandleVerifier [0x00007FF7E572DF93+4025827]
-	GetHandleVerifier [0x00007FF7E53FF059+687785]
-	(No symbol) [0x00007FF7E52DB538]
-	(No symbol) [0x00007FF7E52D7594]
-	(No symbol) [0x00007FF7E52D7719]
-	(No symbol) [0x00007FF7E52C80C4]
-	BaseThreadInitThunk [0x00007FF9E3997BD4+20]
-	RtlUserThreadStart [0x00007FF9E4B2CED1+33]
-</status>
+<status status="FAIL" start="2025-11-24T21:00:18.591227" elapsed="1.586233">Execution terminated by signal</status>
 </kw>
 <kw name="Close Browser" owner="resources">
-<status status="NOT RUN" start="2025-11-24T20:17:09.545280" elapsed="0.000041"/>
+<status status="NOT RUN" start="2025-11-24T21:00:20.177849" elapsed="0.000042"/>
 </kw>
 <tag>chrome</tag>
-<status status="FAIL" start="2025-11-24T20:16:37.519202" elapsed="32.026304">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF7E5364D32+56194]
-	(No symbol) [0x00007FF7E52D04E2]
-	(No symbol) [0x00007FF7E51776AA]
-	(No symbol) [0x00007FF7E51C8763]
-	(No symbol) [0x00007FF7E51C675D]
-	(No symbol) [0x00007FF7E51C3F5C]
-	(No symbol) [0x00007FF7E51C2D15]
-	(No symbol) [0x00007FF7E51B687F]
-	(No symbol) [0x00007FF7E51E5E7A]
-	(No symbol) [0x00007FF7E51B6226]
-	(No symbol) [0x00007FF7E51E6320]
-	(No symbol) [0x00007FF7E5202786]
-	(No symbol) [0x00007FF7E51E5C23]
-	(No symbol) [0x00007FF7E51B4A45]
-	(No symbol) [0x00007FF7E51B5AD4]
-	GetHandleVerifier [0x00007FF7E56DD5EB+3695675]
-	GetHandleVerifier [0x00007FF7E57361C7+4059159]
-	GetHandleVerifier [0x00007FF7E572DF93+4025827]
-	GetHandleVerifier [0x00007FF7E53FF059+687785]
-	(No symbol) [0x00007FF7E52DB538]
-	(No symbol) [0x00007FF7E52D7594]
-	(No symbol) [0x00007FF7E52D7719]
-	(No symbol) [0x00007FF7E52C80C4]
-	BaseThreadInitThunk [0x00007FF9E3997BD4+20]
-	RtlUserThreadStart [0x00007FF9E4B2CED1+33]
-</status>
+<status status="FAIL" start="2025-11-24T21:00:18.590438" elapsed="1.587678">Execution terminated by signal</status>
 </test>
 <test id="s1-t5" name="TC2_LOGIN_SAFARI" line="32">
-<kw name="Log in" owner="resources">
-<kw name="Open Test Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:17:09.547276" level="INFO">${ENV_BS} = True</msg>
-<var>${ENV_BS}</var>
-<arg>BROWSERSTACK</arg>
-<arg>default=${BROWSERSTACK}</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:17:09.547050" elapsed="0.000273"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:17:09.548246" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
-<var>${BS_USER}</var>
-<arg>BROWSERSTACK_USERNAME</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:17:09.548120" elapsed="0.000156"/>
-</kw>
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:17:09.548518" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
-<var>${BS_KEY}</var>
-<arg>BROWSERSTACK_ACCESS_KEY</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:17:09.548387" elapsed="0.000159"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:17:09.548787" level="INFO">Length is 20.</msg>
-<arg>${BS_USER}</arg>
-<arg>BrowserStack username not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:17:09.548646" elapsed="0.000196"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:17:09.549060" level="INFO">Length is 20.</msg>
-<arg>${BS_KEY}</arg>
-<arg>BrowserStack access key not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:17:09.548946" elapsed="0.000161"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-24T20:17:09.549363" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
-<var>${REMOTE_URL}</var>
-<arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-24T20:17:09.549204" elapsed="0.000186"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Safari" owner="resources">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-24T20:17:09.551213" level="INFO">${safari_options} = &lt;selenium.webdriver.safari.options.Options object at 0x1061c3d90&gt;</msg>
-<var>${safari_options}</var>
-<arg>sys.modules['selenium.webdriver'].SafariOptions()</arg>
-<arg>sys, selenium.webdriver</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-24T20:17:09.550949" elapsed="0.000295"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T20:17:09.551801" level="INFO">&amp;{bstack_options} = { os=OS X | osVersion=Monterey | browserVersion=15.6 | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
-<var>&amp;{bstack_options}</var>
-<arg>os=${os}</arg>
-<arg>osVersion=${os_version}</arg>
-<arg>browserVersion=${browser_version}</arg>
-<arg>buildName=browserstack-build-1</arg>
-<arg>projectName=BrowserStack Sample</arg>
-<arg>sessionName=Robot Framework Test</arg>
-<arg>seleniumVersion=4.0.0</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T20:17:09.551359" elapsed="0.000498"/>
-</kw>
-<kw name="Call Method" owner="BuiltIn">
-<arg>${safari_options}</arg>
-<arg>set_capability</arg>
-<arg>bstack:options</arg>
-<arg>${bstack_options}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-24T20:17:09.552105" elapsed="0.000225"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:17:09.552776" level="INFO">Opening browser 'Safari' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
-<arg>${baseUrl}</arg>
-<arg>Safari</arg>
-<arg>remote_url=${remote_url}</arg>
-<arg>options=${safari_options}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-24T20:17:09.552471" elapsed="17.300430"/>
-</kw>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:17:09.549796" elapsed="17.303409"/>
-</kw>
-<arg>'${browser}'=='Chrome'</arg>
-<arg>Open BrowserStack Chrome</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Safari'</arg>
-<arg>Open BrowserStack Safari</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Edge'</arg>
-<arg>Open BrowserStack Edge</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Fail</arg>
-<arg>Unsupported browser: ${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:17:09.549485" elapsed="17.303866"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:17:09.547760" elapsed="17.305782"/>
-</kw>
-<arg>'${ENV_BS}'=='True'</arg>
-<arg>Open BrowserStack Browser</arg>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Open Browser</arg>
-<arg>${baseUrl}</arg>
-<arg>${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:17:09.547456" elapsed="17.306260"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:17:09.546644" elapsed="17.307299"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${logInButton}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:17:26.854281" elapsed="0.583487"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:17:28.438969" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:17:27.438184" elapsed="1.001092"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:17:28.440242" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
-<arg>${logInButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:17:28.439719" elapsed="1.056394"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${loginUsernameField}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:17:29.496645" elapsed="0.344779"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:17:30.844499" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:17:29.841876" elapsed="1.002881"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:17:30.845801" level="INFO">Typing text 'amanTest1' into text field '//*[@id="loginusername"]'.</msg>
-<arg>${loginUsernameField}</arg>
-<arg>${login}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:17:30.845152" elapsed="1.327520"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:17:32.175614" level="INFO">Typing password into text field '//*[@id="loginpassword"]'.</msg>
-<msg time="2025-11-24T20:17:32.929507" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${loginPasswordField}</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:17:32.174879" elapsed="1.156935"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:17:34.333741" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:17:33.332788" elapsed="1.001248"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:17:34.335264" level="INFO">Clicking element '//*[@id="logInModal"]/div/div/div[3]/button[2]'.</msg>
-<arg>${logInFormButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:17:34.334544" elapsed="0.871234"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:17:37.208193" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:17:35.206320" elapsed="2.002100"/>
-</kw>
-<arg>@{SAFARI_CONFIG}</arg>
-<status status="PASS" start="2025-11-24T20:17:09.546221" elapsed="27.662411"/>
-</kw>
-<kw name="Close Browser" owner="resources">
-<kw name="Close All Browsers" owner="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-11-24T20:17:37.209756" elapsed="3.983087"/>
-</kw>
-<status status="PASS" start="2025-11-24T20:17:37.209160" elapsed="3.983858"/>
-</kw>
+<tag>robot:exit</tag>
 <tag>safari</tag>
-<status status="PASS" start="2025-11-24T20:17:09.545807" elapsed="31.647474"/>
+<status status="FAIL" start="2025-11-24T21:00:20.178379" elapsed="0.000362">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-t6" name="TC2_LOGIN_EDGE" line="37">
-<kw name="Log in" owner="resources">
-<kw name="Open Test Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:17:41.195348" level="INFO">${ENV_BS} = True</msg>
-<var>${ENV_BS}</var>
-<arg>BROWSERSTACK</arg>
-<arg>default=${BROWSERSTACK}</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:17:41.195097" elapsed="0.000289"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:17:41.196382" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
-<var>${BS_USER}</var>
-<arg>BROWSERSTACK_USERNAME</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:17:41.196246" elapsed="0.000172"/>
-</kw>
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:17:41.196655" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
-<var>${BS_KEY}</var>
-<arg>BROWSERSTACK_ACCESS_KEY</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:17:41.196525" elapsed="0.000159"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:17:41.197019" level="INFO">Length is 20.</msg>
-<arg>${BS_USER}</arg>
-<arg>BrowserStack username not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:17:41.196796" elapsed="0.000270"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:17:41.197299" level="INFO">Length is 20.</msg>
-<arg>${BS_KEY}</arg>
-<arg>BrowserStack access key not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:17:41.197168" elapsed="0.000177"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-24T20:17:41.197630" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
-<var>${REMOTE_URL}</var>
-<arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-24T20:17:41.197451" elapsed="0.000208"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Edge" owner="resources">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-24T20:17:41.198835" level="INFO">${edge_options} = &lt;selenium.webdriver.edge.options.Options object at 0x1069fb890&gt;</msg>
-<var>${edge_options}</var>
-<arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
-<arg>sys, selenium.webdriver</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-24T20:17:41.198532" elapsed="0.000332"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T20:17:41.199333" level="INFO">&amp;{bstack_options} = { os=Windows | osVersion=10 | browserVersion=latest | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
-<var>&amp;{bstack_options}</var>
-<arg>os=${os}</arg>
-<arg>osVersion=${os_version}</arg>
-<arg>browserVersion=${browser_version}</arg>
-<arg>buildName=browserstack-build-1</arg>
-<arg>projectName=BrowserStack Sample</arg>
-<arg>sessionName=Robot Framework Test</arg>
-<arg>seleniumVersion=4.0.0</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T20:17:41.198982" elapsed="0.000381"/>
-</kw>
-<kw name="Call Method" owner="BuiltIn">
-<arg>${edge_options}</arg>
-<arg>set_capability</arg>
-<arg>bstack:options</arg>
-<arg>${bstack_options}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-24T20:17:41.199473" elapsed="0.000139"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:17:41.200033" level="INFO">Opening browser 'Edge' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
-<arg>${baseUrl}</arg>
-<arg>Edge</arg>
-<arg>remote_url=${remote_url}</arg>
-<arg>options=${edge_options}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-24T20:17:41.199743" elapsed="12.998174"/>
-</kw>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:17:41.198172" elapsed="13.000102"/>
-</kw>
-<arg>'${browser}'=='Chrome'</arg>
-<arg>Open BrowserStack Chrome</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Safari'</arg>
-<arg>Open BrowserStack Safari</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Edge'</arg>
-<arg>Open BrowserStack Edge</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Fail</arg>
-<arg>Unsupported browser: ${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:17:41.197775" elapsed="13.000690"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:17:41.195879" elapsed="13.002850"/>
-</kw>
-<arg>'${ENV_BS}'=='True'</arg>
-<arg>Open BrowserStack Browser</arg>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Open Browser</arg>
-<arg>${baseUrl}</arg>
-<arg>${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:17:41.195537" elapsed="13.003401"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:17:41.194623" elapsed="13.004509"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${logInButton}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:17:54.199532" elapsed="0.177413"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:17:55.379526" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:17:54.377296" elapsed="1.002521"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:17:55.381180" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
-<msg time="2025-11-24T20:17:57.888338" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-24T20:17:57.888795" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff6f79e9a65
-	0x7ff6f79e9ac4
-	0x7ff6f7b9b8a8
-	0x7ff6f77a9c7c
-	0x7ff6f77a8291
-	0x7ff6f77a61c9
-	0x7ff6f77a56c5
-	0x7ff6f779b95e
-	0x7ff6f77c3c8a
-	0x7ff6f779b3d5
-	0x7ff6f779b2ed
-	0x7ff6f779b3d5
-	0x7ff6f77de6f2
-	0x7ff6f779a8aa
-	0x7ff6f7799bd1
-	0x7ff6f779a6d3
-	0x7ff6f78565f4
-	0x7ff6f7852b17
-	0x7ff6f7a166c5
-	0x7ff6f7a04b21
-	0x7ff6f7a0cfc9
-	0x7ff6f79f0fb4
-	0x7ff6f79f1103
-	0x7ff6f79dee36
-	0x7fffd1db7bd4
-	0x7fffd2c6ced1
-</msg>
-<arg>${logInButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-11-24T20:17:55.380407" elapsed="2.510273">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff6f79e9a65
-	0x7ff6f79e9ac4
-	0x7ff6f7b9b8a8
-	0x7ff6f77a9c7c
-	0x7ff6f77a8291
-	0x7ff6f77a61c9
-	0x7ff6f77a56c5
-	0x7ff6f779b95e
-	0x7ff6f77c3c8a
-	0x7ff6f779b3d5
-	0x7ff6f779b2ed
-	0x7ff6f779b3d5
-	0x7ff6f77de6f2
-	0x7ff6f779a8aa
-	0x7ff6f7799bd1
-	0x7ff6f779a6d3
-	0x7ff6f78565f4
-	0x7ff6f7852b17
-	0x7ff6f7a166c5
-	0x7ff6f7a04b21
-	0x7ff6f7a0cfc9
-	0x7ff6f79f0fb4
-	0x7ff6f79f1103
-	0x7ff6f79dee36
-	0x7fffd1db7bd4
-	0x7fffd2c6ced1
-</status>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${loginUsernameField}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="NOT RUN" start="2025-11-24T20:17:57.891147" elapsed="0.000052"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:17:57.891318" elapsed="0.000028"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<arg>${loginUsernameField}</arg>
-<arg>${login}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:17:57.891460" elapsed="0.000029"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<arg>${loginPasswordField}</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:17:57.891592" elapsed="0.000026"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:17:57.891711" elapsed="0.000028"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>${logInFormButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:17:57.891838" elapsed="0.000026"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:17:57.891953" elapsed="0.000025"/>
-</kw>
-<arg>@{EDGE_CONFIG}</arg>
-<status status="FAIL" start="2025-11-24T20:17:41.194153" elapsed="16.698016">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff6f79e9a65
-	0x7ff6f79e9ac4
-	0x7ff6f7b9b8a8
-	0x7ff6f77a9c7c
-	0x7ff6f77a8291
-	0x7ff6f77a61c9
-	0x7ff6f77a56c5
-	0x7ff6f779b95e
-	0x7ff6f77c3c8a
-	0x7ff6f779b3d5
-	0x7ff6f779b2ed
-	0x7ff6f779b3d5
-	0x7ff6f77de6f2
-	0x7ff6f779a8aa
-	0x7ff6f7799bd1
-	0x7ff6f779a6d3
-	0x7ff6f78565f4
-	0x7ff6f7852b17
-	0x7ff6f7a166c5
-	0x7ff6f7a04b21
-	0x7ff6f7a0cfc9
-	0x7ff6f79f0fb4
-	0x7ff6f79f1103
-	0x7ff6f79dee36
-	0x7fffd1db7bd4
-	0x7fffd2c6ced1
-</status>
-</kw>
-<kw name="Close Browser" owner="resources">
-<status status="NOT RUN" start="2025-11-24T20:17:57.892453" elapsed="0.000042"/>
-</kw>
 <tag>edge</tag>
-<status status="FAIL" start="2025-11-24T20:17:41.193606" elapsed="16.699116">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff6f79e9a65
-	0x7ff6f79e9ac4
-	0x7ff6f7b9b8a8
-	0x7ff6f77a9c7c
-	0x7ff6f77a8291
-	0x7ff6f77a61c9
-	0x7ff6f77a56c5
-	0x7ff6f779b95e
-	0x7ff6f77c3c8a
-	0x7ff6f779b3d5
-	0x7ff6f779b2ed
-	0x7ff6f779b3d5
-	0x7ff6f77de6f2
-	0x7ff6f779a8aa
-	0x7ff6f7799bd1
-	0x7ff6f779a6d3
-	0x7ff6f78565f4
-	0x7ff6f7852b17
-	0x7ff6f7a166c5
-	0x7ff6f7a04b21
-	0x7ff6f7a0cfc9
-	0x7ff6f79f0fb4
-	0x7ff6f79f1103
-	0x7ff6f79dee36
-	0x7fffd1db7bd4
-	0x7fffd2c6ced1
-</status>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-11-24T21:00:20.179127" elapsed="0.000373">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-t7" name="TC3_LOGOUT_CHROME" line="42">
-<kw name="Log in" owner="resources">
-<kw name="Open Test Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:17:57.894816" level="INFO">${ENV_BS} = True</msg>
-<var>${ENV_BS}</var>
-<arg>BROWSERSTACK</arg>
-<arg>default=${BROWSERSTACK}</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:17:57.894539" elapsed="0.000316"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:17:57.895804" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
-<var>${BS_USER}</var>
-<arg>BROWSERSTACK_USERNAME</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:17:57.895686" elapsed="0.000145"/>
-</kw>
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:17:57.896035" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
-<var>${BS_KEY}</var>
-<arg>BROWSERSTACK_ACCESS_KEY</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:17:57.895926" elapsed="0.000136"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:17:57.896320" level="INFO">Length is 20.</msg>
-<arg>${BS_USER}</arg>
-<arg>BrowserStack username not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:17:57.896154" elapsed="0.000210"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:17:57.896564" level="INFO">Length is 20.</msg>
-<arg>${BS_KEY}</arg>
-<arg>BrowserStack access key not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:17:57.896452" elapsed="0.000153"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-24T20:17:57.896861" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
-<var>${REMOTE_URL}</var>
-<arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-24T20:17:57.896700" elapsed="0.000188"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Chrome" owner="resources">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-24T20:17:57.898003" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x1069f9f90&gt;</msg>
-<var>${chrome_options}</var>
-<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
-<arg>sys, selenium.webdriver</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-24T20:17:57.897715" elapsed="0.000324"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T20:17:57.898527" level="INFO">&amp;{bstack_options} = { os=Windows | osVersion=10 | browserVersion=120.0 | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
-<var>&amp;{bstack_options}</var>
-<arg>os=${os}</arg>
-<arg>osVersion=${os_version}</arg>
-<arg>browserVersion=${browser_version}</arg>
-<arg>buildName=browserstack-build-1</arg>
-<arg>projectName=BrowserStack Sample</arg>
-<arg>sessionName=Robot Framework Test</arg>
-<arg>seleniumVersion=4.0.0</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T20:17:57.898165" elapsed="0.000392"/>
-</kw>
-<kw name="Call Method" owner="BuiltIn">
-<arg>${chrome_options}</arg>
-<arg>set_capability</arg>
-<arg>bstack:options</arg>
-<arg>${bstack_options}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-24T20:17:57.898671" elapsed="0.000145"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:17:57.899301" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
-<arg>${baseUrl}</arg>
-<arg>Chrome</arg>
-<arg>remote_url=${remote_url}</arg>
-<arg>options=${chrome_options}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-24T20:17:57.898992" elapsed="14.354404"/>
-</kw>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:17:57.897237" elapsed="14.356334"/>
-</kw>
-<arg>'${browser}'=='Chrome'</arg>
-<arg>Open BrowserStack Chrome</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Safari'</arg>
-<arg>Open BrowserStack Safari</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Edge'</arg>
-<arg>Open BrowserStack Edge</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Fail</arg>
-<arg>Unsupported browser: ${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:17:57.896986" elapsed="14.356671"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:17:57.895361" elapsed="14.358419"/>
-</kw>
-<arg>'${ENV_BS}'=='True'</arg>
-<arg>Open BrowserStack Browser</arg>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Open Browser</arg>
-<arg>${baseUrl}</arg>
-<arg>${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:17:57.895010" elapsed="14.358833"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:17:57.894060" elapsed="14.359865"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${logInButton}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:18:12.254122" elapsed="0.662153"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:18:13.917724" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:18:12.916510" elapsed="1.001540"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:18:13.919171" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
-<msg time="2025-11-24T20:18:16.267784" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-24T20:18:16.268107" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF7FA4F4D32+56194]
-	(No symbol) [0x00007FF7FA4604E2]
-	(No symbol) [0x00007FF7FA3076AA]
-	(No symbol) [0x00007FF7FA358763]
-	(No symbol) [0x00007FF7FA35675D]
-	(No symbol) [0x00007FF7FA353F5C]
-	(No symbol) [0x00007FF7FA352D15]
-	(No symbol) [0x00007FF7FA34687F]
-	(No symbol) [0x00007FF7FA375E7A]
-	(No symbol) [0x00007FF7FA346226]
-	(No symbol) [0x00007FF7FA376320]
-	(No symbol) [0x00007FF7FA392786]
-	(No symbol) [0x00007FF7FA375C23]
-	(No symbol) [0x00007FF7FA344A45]
-	(No symbol) [0x00007FF7FA345AD4]
-	GetHandleVerifier [0x00007FF7FA86D5EB+3695675]
-	GetHandleVerifier [0x00007FF7FA8C61C7+4059159]
-	GetHandleVerifier [0x00007FF7FA8BDF93+4025827]
-	GetHandleVerifier [0x00007FF7FA58F059+687785]
-	(No symbol) [0x00007FF7FA46B538]
-	(No symbol) [0x00007FF7FA467594]
-	(No symbol) [0x00007FF7FA467719]
-	(No symbol) [0x00007FF7FA4580C4]
-	BaseThreadInitThunk [0x00007FFF39D07BD4+20]
-	RtlUserThreadStart [0x00007FFF3B96CED1+33]
-</msg>
-<arg>${logInButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-11-24T20:18:13.918440" elapsed="2.351010">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF7FA4F4D32+56194]
-	(No symbol) [0x00007FF7FA4604E2]
-	(No symbol) [0x00007FF7FA3076AA]
-	(No symbol) [0x00007FF7FA358763]
-	(No symbol) [0x00007FF7FA35675D]
-	(No symbol) [0x00007FF7FA353F5C]
-	(No symbol) [0x00007FF7FA352D15]
-	(No symbol) [0x00007FF7FA34687F]
-	(No symbol) [0x00007FF7FA375E7A]
-	(No symbol) [0x00007FF7FA346226]
-	(No symbol) [0x00007FF7FA376320]
-	(No symbol) [0x00007FF7FA392786]
-	(No symbol) [0x00007FF7FA375C23]
-	(No symbol) [0x00007FF7FA344A45]
-	(No symbol) [0x00007FF7FA345AD4]
-	GetHandleVerifier [0x00007FF7FA86D5EB+3695675]
-	GetHandleVerifier [0x00007FF7FA8C61C7+4059159]
-	GetHandleVerifier [0x00007FF7FA8BDF93+4025827]
-	GetHandleVerifier [0x00007FF7FA58F059+687785]
-	(No symbol) [0x00007FF7FA46B538]
-	(No symbol) [0x00007FF7FA467594]
-	(No symbol) [0x00007FF7FA467719]
-	(No symbol) [0x00007FF7FA4580C4]
-	BaseThreadInitThunk [0x00007FFF39D07BD4+20]
-	RtlUserThreadStart [0x00007FFF3B96CED1+33]
-</status>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${loginUsernameField}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="NOT RUN" start="2025-11-24T20:18:16.269866" elapsed="0.000067"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:18:16.270082" elapsed="0.000034"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<arg>${loginUsernameField}</arg>
-<arg>${login}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:18:16.270242" elapsed="0.000030"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<arg>${loginPasswordField}</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:18:16.270384" elapsed="0.000028"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:18:16.270508" elapsed="0.000027"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>${logInFormButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:18:16.270639" elapsed="0.000027"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:18:16.270760" elapsed="0.000029"/>
-</kw>
-<arg>@{CHROME_CONFIG}</arg>
-<status status="FAIL" start="2025-11-24T20:17:57.893578" elapsed="18.377393">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF7FA4F4D32+56194]
-	(No symbol) [0x00007FF7FA4604E2]
-	(No symbol) [0x00007FF7FA3076AA]
-	(No symbol) [0x00007FF7FA358763]
-	(No symbol) [0x00007FF7FA35675D]
-	(No symbol) [0x00007FF7FA353F5C]
-	(No symbol) [0x00007FF7FA352D15]
-	(No symbol) [0x00007FF7FA34687F]
-	(No symbol) [0x00007FF7FA375E7A]
-	(No symbol) [0x00007FF7FA346226]
-	(No symbol) [0x00007FF7FA376320]
-	(No symbol) [0x00007FF7FA392786]
-	(No symbol) [0x00007FF7FA375C23]
-	(No symbol) [0x00007FF7FA344A45]
-	(No symbol) [0x00007FF7FA345AD4]
-	GetHandleVerifier [0x00007FF7FA86D5EB+3695675]
-	GetHandleVerifier [0x00007FF7FA8C61C7+4059159]
-	GetHandleVerifier [0x00007FF7FA8BDF93+4025827]
-	GetHandleVerifier [0x00007FF7FA58F059+687785]
-	(No symbol) [0x00007FF7FA46B538]
-	(No symbol) [0x00007FF7FA467594]
-	(No symbol) [0x00007FF7FA467719]
-	(No symbol) [0x00007FF7FA4580C4]
-	BaseThreadInitThunk [0x00007FFF39D07BD4+20]
-	RtlUserThreadStart [0x00007FFF3B96CED1+33]
-</status>
-</kw>
-<kw name="Logout" owner="resources">
-<status status="NOT RUN" start="2025-11-24T20:18:16.271646" elapsed="0.000161"/>
-</kw>
-<kw name="Close Browser" owner="resources">
-<status status="NOT RUN" start="2025-11-24T20:18:16.272108" elapsed="0.000151"/>
-</kw>
 <tag>chrome</tag>
-<status status="FAIL" start="2025-11-24T20:17:57.893090" elapsed="18.379456">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF7FA4F4D32+56194]
-	(No symbol) [0x00007FF7FA4604E2]
-	(No symbol) [0x00007FF7FA3076AA]
-	(No symbol) [0x00007FF7FA358763]
-	(No symbol) [0x00007FF7FA35675D]
-	(No symbol) [0x00007FF7FA353F5C]
-	(No symbol) [0x00007FF7FA352D15]
-	(No symbol) [0x00007FF7FA34687F]
-	(No symbol) [0x00007FF7FA375E7A]
-	(No symbol) [0x00007FF7FA346226]
-	(No symbol) [0x00007FF7FA376320]
-	(No symbol) [0x00007FF7FA392786]
-	(No symbol) [0x00007FF7FA375C23]
-	(No symbol) [0x00007FF7FA344A45]
-	(No symbol) [0x00007FF7FA345AD4]
-	GetHandleVerifier [0x00007FF7FA86D5EB+3695675]
-	GetHandleVerifier [0x00007FF7FA8C61C7+4059159]
-	GetHandleVerifier [0x00007FF7FA8BDF93+4025827]
-	GetHandleVerifier [0x00007FF7FA58F059+687785]
-	(No symbol) [0x00007FF7FA46B538]
-	(No symbol) [0x00007FF7FA467594]
-	(No symbol) [0x00007FF7FA467719]
-	(No symbol) [0x00007FF7FA4580C4]
-	BaseThreadInitThunk [0x00007FFF39D07BD4+20]
-	RtlUserThreadStart [0x00007FFF3B96CED1+33]
-</status>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-11-24T21:00:20.179823" elapsed="0.000286">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-t8" name="TC3_LOGOUT_SAFARI" line="48">
-<kw name="Log in" owner="resources">
-<kw name="Open Test Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:18:16.277305" level="INFO">${ENV_BS} = True</msg>
-<var>${ENV_BS}</var>
-<arg>BROWSERSTACK</arg>
-<arg>default=${BROWSERSTACK}</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:18:16.276922" elapsed="0.000427"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:18:16.278774" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
-<var>${BS_USER}</var>
-<arg>BROWSERSTACK_USERNAME</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:18:16.278624" elapsed="0.000182"/>
-</kw>
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:18:16.279020" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
-<var>${BS_KEY}</var>
-<arg>BROWSERSTACK_ACCESS_KEY</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:18:16.278913" elapsed="0.000131"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:18:16.279292" level="INFO">Length is 20.</msg>
-<arg>${BS_USER}</arg>
-<arg>BrowserStack username not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:18:16.279133" elapsed="0.000199"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:18:16.279614" level="INFO">Length is 20.</msg>
-<arg>${BS_KEY}</arg>
-<arg>BrowserStack access key not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:18:16.279417" elapsed="0.000321"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-24T20:18:16.280207" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
-<var>${REMOTE_URL}</var>
-<arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-24T20:18:16.279924" elapsed="0.000317"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Safari" owner="resources">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-24T20:18:16.281521" level="INFO">${safari_options} = &lt;selenium.webdriver.safari.options.Options object at 0x106cc07d0&gt;</msg>
-<var>${safari_options}</var>
-<arg>sys.modules['selenium.webdriver'].SafariOptions()</arg>
-<arg>sys, selenium.webdriver</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-24T20:18:16.281244" elapsed="0.000312"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T20:18:16.282057" level="INFO">&amp;{bstack_options} = { os=OS X | osVersion=Monterey | browserVersion=15.6 | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
-<var>&amp;{bstack_options}</var>
-<arg>os=${os}</arg>
-<arg>osVersion=${os_version}</arg>
-<arg>browserVersion=${browser_version}</arg>
-<arg>buildName=browserstack-build-1</arg>
-<arg>projectName=BrowserStack Sample</arg>
-<arg>sessionName=Robot Framework Test</arg>
-<arg>seleniumVersion=4.0.0</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T20:18:16.281683" elapsed="0.000408"/>
-</kw>
-<kw name="Call Method" owner="BuiltIn">
-<arg>${safari_options}</arg>
-<arg>set_capability</arg>
-<arg>bstack:options</arg>
-<arg>${bstack_options}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-24T20:18:16.282213" elapsed="0.000160"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:18:16.282821" level="INFO">Opening browser 'Safari' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
-<arg>${baseUrl}</arg>
-<arg>Safari</arg>
-<arg>remote_url=${remote_url}</arg>
-<arg>options=${safari_options}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-24T20:18:16.282516" elapsed="16.601360"/>
-</kw>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:18:16.280865" elapsed="16.603337"/>
-</kw>
-<arg>'${browser}'=='Chrome'</arg>
-<arg>Open BrowserStack Chrome</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Safari'</arg>
-<arg>Open BrowserStack Safari</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Edge'</arg>
-<arg>Open BrowserStack Edge</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Fail</arg>
-<arg>Unsupported browser: ${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:18:16.280377" elapsed="16.604105"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:18:16.278222" elapsed="16.606776"/>
-</kw>
-<arg>'${ENV_BS}'=='True'</arg>
-<arg>Open BrowserStack Browser</arg>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Open Browser</arg>
-<arg>${baseUrl}</arg>
-<arg>${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:18:16.277795" elapsed="16.607506"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:18:16.276377" elapsed="16.609160"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${logInButton}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:18:32.885960" elapsed="0.738500"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:18:34.626053" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:18:33.624998" elapsed="1.001371"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:18:34.627491" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
-<arg>${logInButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:18:34.626858" elapsed="1.021449"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${loginUsernameField}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:18:35.648826" elapsed="0.448415"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:18:37.099676" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:18:36.098105" elapsed="1.002480"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:18:37.103396" level="INFO">Typing text 'amanTest1' into text field '//*[@id="loginusername"]'.</msg>
-<arg>${loginUsernameField}</arg>
-<arg>${login}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:18:37.102023" elapsed="1.266580"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:18:38.369500" level="INFO">Typing password into text field '//*[@id="loginpassword"]'.</msg>
-<msg time="2025-11-24T20:18:39.018459" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${loginPasswordField}</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:18:38.368989" elapsed="0.957062"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:18:40.329062" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:18:39.326418" elapsed="1.002968"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:18:40.330543" level="INFO">Clicking element '//*[@id="logInModal"]/div/div/div[3]/button[2]'.</msg>
-<arg>${logInFormButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:18:40.329883" elapsed="0.876634"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:18:43.209896" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:18:41.207035" elapsed="2.003298"/>
-</kw>
-<arg>@{SAFARI_CONFIG}</arg>
-<status status="PASS" start="2025-11-24T20:18:16.275822" elapsed="26.934832"/>
-</kw>
-<kw name="Logout" owner="resources">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${logoutButton}</arg>
-<arg>timeout=80</arg>
-<arg>error=Logout button not found</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:18:43.212252" elapsed="0.411172"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:18:44.625026" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:18:43.623779" elapsed="1.001573"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:18:44.626490" level="INFO">Clicking element '//*[@id="logout2"]'.</msg>
-<arg>${logoutButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:18:44.625845" elapsed="0.956564"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:18:47.583558" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:18:45.582894" elapsed="2.001005"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${logInButton}</arg>
-<arg>timeout=80</arg>
-<arg>error=Login button should appear after logout</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:18:47.584386" elapsed="0.332335"/>
-</kw>
-<status status="PASS" start="2025-11-24T20:18:43.211394" elapsed="4.705580"/>
-</kw>
-<kw name="Close Browser" owner="resources">
-<kw name="Close All Browsers" owner="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-11-24T20:18:47.918176" elapsed="3.700237"/>
-</kw>
-<status status="PASS" start="2025-11-24T20:18:47.917575" elapsed="3.701113"/>
-</kw>
+<tag>robot:exit</tag>
 <tag>safari</tag>
-<status status="PASS" start="2025-11-24T20:18:16.274691" elapsed="35.344372"/>
+<status status="FAIL" start="2025-11-24T21:00:20.180306" elapsed="0.000313">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-t9" name="TC3_LOGOUT_EDGE" line="54">
-<kw name="Log in" owner="resources">
-<kw name="Open Test Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:18:51.621699" level="INFO">${ENV_BS} = True</msg>
-<var>${ENV_BS}</var>
-<arg>BROWSERSTACK</arg>
-<arg>default=${BROWSERSTACK}</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:18:51.621407" elapsed="0.000338"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:18:51.622895" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
-<var>${BS_USER}</var>
-<arg>BROWSERSTACK_USERNAME</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:18:51.622744" elapsed="0.000186"/>
-</kw>
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:18:51.623176" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
-<var>${BS_KEY}</var>
-<arg>BROWSERSTACK_ACCESS_KEY</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:18:51.623041" elapsed="0.000166"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:18:51.623559" level="INFO">Length is 20.</msg>
-<arg>${BS_USER}</arg>
-<arg>BrowserStack username not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:18:51.623379" elapsed="0.000229"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:18:51.623827" level="INFO">Length is 20.</msg>
-<arg>${BS_KEY}</arg>
-<arg>BrowserStack access key not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:18:51.623702" elapsed="0.000167"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-24T20:18:51.624152" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
-<var>${REMOTE_URL}</var>
-<arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-24T20:18:51.623984" elapsed="0.000196"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Edge" owner="resources">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-24T20:18:51.625377" level="INFO">${edge_options} = &lt;selenium.webdriver.edge.options.Options object at 0x106102710&gt;</msg>
-<var>${edge_options}</var>
-<arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
-<arg>sys, selenium.webdriver</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-24T20:18:51.625067" elapsed="0.000340"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T20:18:51.626093" level="INFO">&amp;{bstack_options} = { os=Windows | osVersion=10 | browserVersion=latest | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
-<var>&amp;{bstack_options}</var>
-<arg>os=${os}</arg>
-<arg>osVersion=${os_version}</arg>
-<arg>browserVersion=${browser_version}</arg>
-<arg>buildName=browserstack-build-1</arg>
-<arg>projectName=BrowserStack Sample</arg>
-<arg>sessionName=Robot Framework Test</arg>
-<arg>seleniumVersion=4.0.0</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T20:18:51.625521" elapsed="0.000638"/>
-</kw>
-<kw name="Call Method" owner="BuiltIn">
-<arg>${edge_options}</arg>
-<arg>set_capability</arg>
-<arg>bstack:options</arg>
-<arg>${bstack_options}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-24T20:18:51.626552" elapsed="0.000156"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:18:51.627117" level="INFO">Opening browser 'Edge' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
-<arg>${baseUrl}</arg>
-<arg>Edge</arg>
-<arg>remote_url=${remote_url}</arg>
-<arg>options=${edge_options}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-24T20:18:51.626842" elapsed="12.343739"/>
-</kw>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:18:51.624725" elapsed="12.346131"/>
-</kw>
-<arg>'${browser}'=='Chrome'</arg>
-<arg>Open BrowserStack Chrome</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Safari'</arg>
-<arg>Open BrowserStack Safari</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Edge'</arg>
-<arg>Open BrowserStack Edge</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Fail</arg>
-<arg>Unsupported browser: ${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:18:51.624288" elapsed="12.346735"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:18:51.622353" elapsed="12.348984"/>
-</kw>
-<arg>'${ENV_BS}'=='True'</arg>
-<arg>Open BrowserStack Browser</arg>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Open Browser</arg>
-<arg>${baseUrl}</arg>
-<arg>${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:18:51.621920" elapsed="12.349559"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:18:51.620895" elapsed="12.350770"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${logInButton}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:19:03.972016" elapsed="0.149695"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:19:05.123585" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:19:04.122214" elapsed="1.001716"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:19:05.125201" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
-<msg time="2025-11-24T20:19:07.520569" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-24T20:19:07.520982" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff7f0939a65
-	0x7ff7f0939ac4
-	0x7ff7f0aeb8a8
-	0x7ff7f06f9c7c
-	0x7ff7f06f8291
-	0x7ff7f06f61c9
-	0x7ff7f06f56c5
-	0x7ff7f06eb95e
-	0x7ff7f0713c8a
-	0x7ff7f06eb3d5
-	0x7ff7f06eb2ed
-	0x7ff7f06eb3d5
-	0x7ff7f072e6f2
-	0x7ff7f06ea8aa
-	0x7ff7f06e9bd1
-	0x7ff7f06ea6d3
-	0x7ff7f07a65f4
-	0x7ff7f07a2b17
-	0x7ff7f09666c5
-	0x7ff7f0954b21
-	0x7ff7f095cfc9
-	0x7ff7f0940fb4
-	0x7ff7f0941103
-	0x7ff7f092ee36
-	0x7ffaba5e7034
-	0x7ffaba722651
-</msg>
-<arg>${logInButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-11-24T20:19:05.124503" elapsed="2.398244">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff7f0939a65
-	0x7ff7f0939ac4
-	0x7ff7f0aeb8a8
-	0x7ff7f06f9c7c
-	0x7ff7f06f8291
-	0x7ff7f06f61c9
-	0x7ff7f06f56c5
-	0x7ff7f06eb95e
-	0x7ff7f0713c8a
-	0x7ff7f06eb3d5
-	0x7ff7f06eb2ed
-	0x7ff7f06eb3d5
-	0x7ff7f072e6f2
-	0x7ff7f06ea8aa
-	0x7ff7f06e9bd1
-	0x7ff7f06ea6d3
-	0x7ff7f07a65f4
-	0x7ff7f07a2b17
-	0x7ff7f09666c5
-	0x7ff7f0954b21
-	0x7ff7f095cfc9
-	0x7ff7f0940fb4
-	0x7ff7f0941103
-	0x7ff7f092ee36
-	0x7ffaba5e7034
-	0x7ffaba722651
-</status>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${loginUsernameField}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="NOT RUN" start="2025-11-24T20:19:07.523213" elapsed="0.000059"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:19:07.523413" elapsed="0.000032"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<arg>${loginUsernameField}</arg>
-<arg>${login}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:19:07.523556" elapsed="0.000027"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<arg>${loginPasswordField}</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:19:07.523687" elapsed="0.000025"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:19:07.523799" elapsed="0.000025"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>${logInFormButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:19:07.523917" elapsed="0.000023"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:19:07.524022" elapsed="0.000024"/>
-</kw>
-<arg>@{EDGE_CONFIG}</arg>
-<status status="FAIL" start="2025-11-24T20:18:51.620302" elapsed="15.903923">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff7f0939a65
-	0x7ff7f0939ac4
-	0x7ff7f0aeb8a8
-	0x7ff7f06f9c7c
-	0x7ff7f06f8291
-	0x7ff7f06f61c9
-	0x7ff7f06f56c5
-	0x7ff7f06eb95e
-	0x7ff7f0713c8a
-	0x7ff7f06eb3d5
-	0x7ff7f06eb2ed
-	0x7ff7f06eb3d5
-	0x7ff7f072e6f2
-	0x7ff7f06ea8aa
-	0x7ff7f06e9bd1
-	0x7ff7f06ea6d3
-	0x7ff7f07a65f4
-	0x7ff7f07a2b17
-	0x7ff7f09666c5
-	0x7ff7f0954b21
-	0x7ff7f095cfc9
-	0x7ff7f0940fb4
-	0x7ff7f0941103
-	0x7ff7f092ee36
-	0x7ffaba5e7034
-	0x7ffaba722651
-</status>
-</kw>
-<kw name="Logout" owner="resources">
-<status status="NOT RUN" start="2025-11-24T20:19:07.524647" elapsed="0.000256"/>
-</kw>
-<kw name="Close Browser" owner="resources">
-<status status="NOT RUN" start="2025-11-24T20:19:07.525230" elapsed="0.000044"/>
-</kw>
 <tag>edge</tag>
-<status status="FAIL" start="2025-11-24T20:18:51.619491" elapsed="15.906089">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff7f0939a65
-	0x7ff7f0939ac4
-	0x7ff7f0aeb8a8
-	0x7ff7f06f9c7c
-	0x7ff7f06f8291
-	0x7ff7f06f61c9
-	0x7ff7f06f56c5
-	0x7ff7f06eb95e
-	0x7ff7f0713c8a
-	0x7ff7f06eb3d5
-	0x7ff7f06eb2ed
-	0x7ff7f06eb3d5
-	0x7ff7f072e6f2
-	0x7ff7f06ea8aa
-	0x7ff7f06e9bd1
-	0x7ff7f06ea6d3
-	0x7ff7f07a65f4
-	0x7ff7f07a2b17
-	0x7ff7f09666c5
-	0x7ff7f0954b21
-	0x7ff7f095cfc9
-	0x7ff7f0940fb4
-	0x7ff7f0941103
-	0x7ff7f092ee36
-	0x7ffaba5e7034
-	0x7ffaba722651
-</status>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-11-24T21:00:20.180806" elapsed="0.000247">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-t10" name="TC4_ADD_TO_CART_CHROME" line="60">
-<kw name="Log in" owner="resources">
-<kw name="Open Test Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:19:07.527942" level="INFO">${ENV_BS} = True</msg>
-<var>${ENV_BS}</var>
-<arg>BROWSERSTACK</arg>
-<arg>default=${BROWSERSTACK}</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:19:07.527680" elapsed="0.000299"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:19:07.528916" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
-<var>${BS_USER}</var>
-<arg>BROWSERSTACK_USERNAME</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:19:07.528793" elapsed="0.000150"/>
-</kw>
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:19:07.529141" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
-<var>${BS_KEY}</var>
-<arg>BROWSERSTACK_ACCESS_KEY</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:19:07.529032" elapsed="0.000135"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:19:07.529571" level="INFO">Length is 20.</msg>
-<arg>${BS_USER}</arg>
-<arg>BrowserStack username not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:19:07.529278" elapsed="0.000440"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:19:07.529938" level="INFO">Length is 20.</msg>
-<arg>${BS_KEY}</arg>
-<arg>BrowserStack access key not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:19:07.529808" elapsed="0.000172"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-24T20:19:07.530234" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
-<var>${REMOTE_URL}</var>
-<arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-24T20:19:07.530075" elapsed="0.000187"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Chrome" owner="resources">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-24T20:19:07.532271" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x106ada520&gt;</msg>
-<var>${chrome_options}</var>
-<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
-<arg>sys, selenium.webdriver</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-24T20:19:07.531883" elapsed="0.000430"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T20:19:07.532854" level="INFO">&amp;{bstack_options} = { os=Windows | osVersion=10 | browserVersion=120.0 | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
-<var>&amp;{bstack_options}</var>
-<arg>os=${os}</arg>
-<arg>osVersion=${os_version}</arg>
-<arg>browserVersion=${browser_version}</arg>
-<arg>buildName=browserstack-build-1</arg>
-<arg>projectName=BrowserStack Sample</arg>
-<arg>sessionName=Robot Framework Test</arg>
-<arg>seleniumVersion=4.0.0</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T20:19:07.532459" elapsed="0.000484"/>
-</kw>
-<kw name="Call Method" owner="BuiltIn">
-<arg>${chrome_options}</arg>
-<arg>set_capability</arg>
-<arg>bstack:options</arg>
-<arg>${bstack_options}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-24T20:19:07.533140" elapsed="0.000225"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:19:07.533940" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
-<arg>${baseUrl}</arg>
-<arg>Chrome</arg>
-<arg>remote_url=${remote_url}</arg>
-<arg>options=${chrome_options}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-24T20:19:07.533588" elapsed="15.838437"/>
-</kw>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:19:07.531400" elapsed="15.840859"/>
-</kw>
-<arg>'${browser}'=='Chrome'</arg>
-<arg>Open BrowserStack Chrome</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Safari'</arg>
-<arg>Open BrowserStack Safari</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Edge'</arg>
-<arg>Open BrowserStack Edge</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Fail</arg>
-<arg>Unsupported browser: ${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:19:07.530691" elapsed="15.841647"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:19:07.528456" elapsed="15.843994"/>
-</kw>
-<arg>'${ENV_BS}'=='True'</arg>
-<arg>Open BrowserStack Browser</arg>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Open Browser</arg>
-<arg>${baseUrl}</arg>
-<arg>${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:19:07.528116" elapsed="15.844393"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:19:07.527246" elapsed="15.845340"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${logInButton}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:19:23.372911" elapsed="0.627947"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:19:25.002510" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:19:24.001376" elapsed="1.001878"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:19:25.003819" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
-<msg time="2025-11-24T20:19:27.549098" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-24T20:19:27.549362" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF6A9584D32+56194]
-	(No symbol) [0x00007FF6A94F04E2]
-	(No symbol) [0x00007FF6A93976AA]
-	(No symbol) [0x00007FF6A93E8763]
-	(No symbol) [0x00007FF6A93E675D]
-	(No symbol) [0x00007FF6A93E3F5C]
-	(No symbol) [0x00007FF6A93E2D15]
-	(No symbol) [0x00007FF6A93D687F]
-	(No symbol) [0x00007FF6A9405E7A]
-	(No symbol) [0x00007FF6A93D6226]
-	(No symbol) [0x00007FF6A9406320]
-	(No symbol) [0x00007FF6A9422786]
-	(No symbol) [0x00007FF6A9405C23]
-	(No symbol) [0x00007FF6A93D4A45]
-	(No symbol) [0x00007FF6A93D5AD4]
-	GetHandleVerifier [0x00007FF6A98FD5EB+3695675]
-	GetHandleVerifier [0x00007FF6A99561C7+4059159]
-	GetHandleVerifier [0x00007FF6A994DF93+4025827]
-	GetHandleVerifier [0x00007FF6A961F059+687785]
-	(No symbol) [0x00007FF6A94FB538]
-	(No symbol) [0x00007FF6A94F7594]
-	(No symbol) [0x00007FF6A94F7719]
-	(No symbol) [0x00007FF6A94E80C4]
-	BaseThreadInitThunk [0x00007FF8DBC37BD4+20]
-	RtlUserThreadStart [0x00007FF8DCC8CED1+33]
-</msg>
-<arg>${logInButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-11-24T20:19:25.003499" elapsed="2.547284">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF6A9584D32+56194]
-	(No symbol) [0x00007FF6A94F04E2]
-	(No symbol) [0x00007FF6A93976AA]
-	(No symbol) [0x00007FF6A93E8763]
-	(No symbol) [0x00007FF6A93E675D]
-	(No symbol) [0x00007FF6A93E3F5C]
-	(No symbol) [0x00007FF6A93E2D15]
-	(No symbol) [0x00007FF6A93D687F]
-	(No symbol) [0x00007FF6A9405E7A]
-	(No symbol) [0x00007FF6A93D6226]
-	(No symbol) [0x00007FF6A9406320]
-	(No symbol) [0x00007FF6A9422786]
-	(No symbol) [0x00007FF6A9405C23]
-	(No symbol) [0x00007FF6A93D4A45]
-	(No symbol) [0x00007FF6A93D5AD4]
-	GetHandleVerifier [0x00007FF6A98FD5EB+3695675]
-	GetHandleVerifier [0x00007FF6A99561C7+4059159]
-	GetHandleVerifier [0x00007FF6A994DF93+4025827]
-	GetHandleVerifier [0x00007FF6A961F059+687785]
-	(No symbol) [0x00007FF6A94FB538]
-	(No symbol) [0x00007FF6A94F7594]
-	(No symbol) [0x00007FF6A94F7719]
-	(No symbol) [0x00007FF6A94E80C4]
-	BaseThreadInitThunk [0x00007FF8DBC37BD4+20]
-	RtlUserThreadStart [0x00007FF8DCC8CED1+33]
-</status>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${loginUsernameField}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="NOT RUN" start="2025-11-24T20:19:27.551030" elapsed="0.000042"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:19:27.551194" elapsed="0.000030"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<arg>${loginUsernameField}</arg>
-<arg>${login}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:19:27.551331" elapsed="0.000028"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<arg>${loginPasswordField}</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:19:27.551462" elapsed="0.000027"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:19:27.551583" elapsed="0.000026"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>${logInFormButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:19:27.551707" elapsed="0.000026"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:19:27.551822" elapsed="0.000025"/>
-</kw>
-<arg>@{CHROME_CONFIG}</arg>
-<status status="FAIL" start="2025-11-24T20:19:07.526768" elapsed="20.026099">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF6A9584D32+56194]
-	(No symbol) [0x00007FF6A94F04E2]
-	(No symbol) [0x00007FF6A93976AA]
-	(No symbol) [0x00007FF6A93E8763]
-	(No symbol) [0x00007FF6A93E675D]
-	(No symbol) [0x00007FF6A93E3F5C]
-	(No symbol) [0x00007FF6A93E2D15]
-	(No symbol) [0x00007FF6A93D687F]
-	(No symbol) [0x00007FF6A9405E7A]
-	(No symbol) [0x00007FF6A93D6226]
-	(No symbol) [0x00007FF6A9406320]
-	(No symbol) [0x00007FF6A9422786]
-	(No symbol) [0x00007FF6A9405C23]
-	(No symbol) [0x00007FF6A93D4A45]
-	(No symbol) [0x00007FF6A93D5AD4]
-	GetHandleVerifier [0x00007FF6A98FD5EB+3695675]
-	GetHandleVerifier [0x00007FF6A99561C7+4059159]
-	GetHandleVerifier [0x00007FF6A994DF93+4025827]
-	GetHandleVerifier [0x00007FF6A961F059+687785]
-	(No symbol) [0x00007FF6A94FB538]
-	(No symbol) [0x00007FF6A94F7594]
-	(No symbol) [0x00007FF6A94F7719]
-	(No symbol) [0x00007FF6A94E80C4]
-	BaseThreadInitThunk [0x00007FF8DBC37BD4+20]
-	RtlUserThreadStart [0x00007FF8DCC8CED1+33]
-</status>
-</kw>
-<kw name="Add to Cart" owner="resources">
-<status status="NOT RUN" start="2025-11-24T20:19:27.553214" elapsed="0.000046"/>
-</kw>
-<kw name="Close Browser" owner="resources">
-<status status="NOT RUN" start="2025-11-24T20:19:27.553505" elapsed="0.000054"/>
-</kw>
 <tag>chrome</tag>
-<status status="FAIL" start="2025-11-24T20:19:07.526246" elapsed="20.027554">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: chrome=120.0.6099.63); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-	GetHandleVerifier [0x00007FF6A9584D32+56194]
-	(No symbol) [0x00007FF6A94F04E2]
-	(No symbol) [0x00007FF6A93976AA]
-	(No symbol) [0x00007FF6A93E8763]
-	(No symbol) [0x00007FF6A93E675D]
-	(No symbol) [0x00007FF6A93E3F5C]
-	(No symbol) [0x00007FF6A93E2D15]
-	(No symbol) [0x00007FF6A93D687F]
-	(No symbol) [0x00007FF6A9405E7A]
-	(No symbol) [0x00007FF6A93D6226]
-	(No symbol) [0x00007FF6A9406320]
-	(No symbol) [0x00007FF6A9422786]
-	(No symbol) [0x00007FF6A9405C23]
-	(No symbol) [0x00007FF6A93D4A45]
-	(No symbol) [0x00007FF6A93D5AD4]
-	GetHandleVerifier [0x00007FF6A98FD5EB+3695675]
-	GetHandleVerifier [0x00007FF6A99561C7+4059159]
-	GetHandleVerifier [0x00007FF6A994DF93+4025827]
-	GetHandleVerifier [0x00007FF6A961F059+687785]
-	(No symbol) [0x00007FF6A94FB538]
-	(No symbol) [0x00007FF6A94F7594]
-	(No symbol) [0x00007FF6A94F7719]
-	(No symbol) [0x00007FF6A94E80C4]
-	BaseThreadInitThunk [0x00007FF8DBC37BD4+20]
-	RtlUserThreadStart [0x00007FF8DCC8CED1+33]
-</status>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-11-24T21:00:20.181231" elapsed="0.000290">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-t11" name="TC4_ADD_TO_CART_SAFARI" line="66">
-<kw name="Log in" owner="resources">
-<kw name="Open Test Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:19:27.555764" level="INFO">${ENV_BS} = True</msg>
-<var>${ENV_BS}</var>
-<arg>BROWSERSTACK</arg>
-<arg>default=${BROWSERSTACK}</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:19:27.555461" elapsed="0.000342"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:19:27.556700" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
-<var>${BS_USER}</var>
-<arg>BROWSERSTACK_USERNAME</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:19:27.556573" elapsed="0.000171"/>
-</kw>
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:19:27.556956" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
-<var>${BS_KEY}</var>
-<arg>BROWSERSTACK_ACCESS_KEY</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:19:27.556842" elapsed="0.000141"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:19:27.557226" level="INFO">Length is 20.</msg>
-<arg>${BS_USER}</arg>
-<arg>BrowserStack username not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:19:27.557083" elapsed="0.000186"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:19:27.557472" level="INFO">Length is 20.</msg>
-<arg>${BS_KEY}</arg>
-<arg>BrowserStack access key not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:19:27.557360" elapsed="0.000155"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-24T20:19:27.557767" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
-<var>${REMOTE_URL}</var>
-<arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-24T20:19:27.557612" elapsed="0.000181"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Safari" owner="resources">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-24T20:19:27.558840" level="INFO">${safari_options} = &lt;selenium.webdriver.safari.options.Options object at 0x106ad9cd0&gt;</msg>
-<var>${safari_options}</var>
-<arg>sys.modules['selenium.webdriver'].SafariOptions()</arg>
-<arg>sys, selenium.webdriver</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-24T20:19:27.558534" elapsed="0.000340"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T20:19:27.559496" level="INFO">&amp;{bstack_options} = { os=OS X | osVersion=Monterey | browserVersion=15.6 | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
-<var>&amp;{bstack_options}</var>
-<arg>os=${os}</arg>
-<arg>osVersion=${os_version}</arg>
-<arg>browserVersion=${browser_version}</arg>
-<arg>buildName=browserstack-build-1</arg>
-<arg>projectName=BrowserStack Sample</arg>
-<arg>sessionName=Robot Framework Test</arg>
-<arg>seleniumVersion=4.0.0</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T20:19:27.559060" elapsed="0.000467"/>
-</kw>
-<kw name="Call Method" owner="BuiltIn">
-<arg>${safari_options}</arg>
-<arg>set_capability</arg>
-<arg>bstack:options</arg>
-<arg>${bstack_options}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-24T20:19:27.559645" elapsed="0.000142"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:19:27.560187" level="INFO">Opening browser 'Safari' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
-<arg>${baseUrl}</arg>
-<arg>Safari</arg>
-<arg>remote_url=${remote_url}</arg>
-<arg>options=${safari_options}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-24T20:19:27.559924" elapsed="9.520876"/>
-</kw>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:19:27.558212" elapsed="9.523618"/>
-</kw>
-<arg>'${browser}'=='Chrome'</arg>
-<arg>Open BrowserStack Chrome</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Safari'</arg>
-<arg>Open BrowserStack Safari</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Edge'</arg>
-<arg>Open BrowserStack Edge</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Fail</arg>
-<arg>Unsupported browser: ${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:19:27.557894" elapsed="9.524190"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:19:27.556243" elapsed="9.526054"/>
-</kw>
-<arg>'${ENV_BS}'=='True'</arg>
-<arg>Open BrowserStack Browser</arg>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Open Browser</arg>
-<arg>${baseUrl}</arg>
-<arg>${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:19:27.555946" elapsed="9.526454"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:19:27.555059" elapsed="9.527543"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${logInButton}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:19:37.083309" elapsed="0.134544"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:19:38.219618" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:19:37.218372" elapsed="1.002825"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:19:38.223001" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
-<arg>${logInButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:19:38.222398" elapsed="0.362428"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${loginUsernameField}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:19:38.585332" elapsed="0.140689"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:19:39.728859" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:19:38.726345" elapsed="1.002834"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:19:39.730453" level="INFO">Typing text 'amanTest1' into text field '//*[@id="loginusername"]'.</msg>
-<arg>${loginUsernameField}</arg>
-<arg>${login}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:19:39.729686" elapsed="0.423227"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:19:40.154871" level="INFO">Typing password into text field '//*[@id="loginpassword"]'.</msg>
-<msg time="2025-11-24T20:19:40.436315" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${loginPasswordField}</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:19:40.153351" elapsed="0.455968"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:19:41.611163" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:19:40.610017" elapsed="1.001563"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:19:41.612746" level="INFO">Clicking element '//*[@id="logInModal"]/div/div/div[3]/button[2]'.</msg>
-<arg>${logInFormButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:19:41.612092" elapsed="0.297920"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:19:43.912110" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:19:41.910391" elapsed="2.002042"/>
-</kw>
-<arg>@{SAFARI_CONFIG}</arg>
-<status status="PASS" start="2025-11-24T20:19:27.554664" elapsed="16.358047"/>
-</kw>
-<kw name="Add to Cart" owner="resources">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${productLink}</arg>
-<arg>timeout=80</arg>
-<arg>error=Product not found</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:19:43.914261" elapsed="0.130035"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:19:45.046127" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:19:44.044664" elapsed="1.001635"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:19:45.046842" level="INFO">Clicking element '//*[@id="tbodyid"]/div[1]/div/div/h4/a'.</msg>
-<arg>${productLink}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:19:45.046553" elapsed="0.297519"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:19:47.345631" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:19:45.344655" elapsed="2.001317"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${addToCartButton}</arg>
-<arg>timeout=80</arg>
-<arg>error=Add to cart button not found</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:19:47.346473" elapsed="0.131874"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:19:48.479357" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:19:47.478747" elapsed="1.000825"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:19:48.480460" level="INFO">Clicking element '//*[@id="tbodyid"]/div[2]/div/a'.</msg>
-<arg>${addToCartButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T20:19:48.479923" elapsed="0.285180"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:19:50.765879" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:19:48.765448" elapsed="2.000725"/>
-</kw>
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:19:50.766939" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<arg>accept</arg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-11-24T20:19:50.766605" elapsed="0.353691"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:19:52.121714" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:19:51.120724" elapsed="1.001238"/>
-</kw>
-<status status="PASS" start="2025-11-24T20:19:43.913577" elapsed="8.208617"/>
-</kw>
-<kw name="Close Browser" owner="resources">
-<kw name="Close All Browsers" owner="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-11-24T20:19:52.123295" elapsed="3.722080"/>
-</kw>
-<status status="PASS" start="2025-11-24T20:19:52.122671" elapsed="3.722909"/>
-</kw>
+<tag>robot:exit</tag>
 <tag>safari</tag>
-<status status="PASS" start="2025-11-24T20:19:27.554213" elapsed="28.291793"/>
+<status status="FAIL" start="2025-11-24T21:00:20.181869" elapsed="0.000298">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-t12" name="TC4_ADD_TO_CART_EDGE" line="72">
-<kw name="Log in" owner="resources">
-<kw name="Open Test Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:19:55.848694" level="INFO">${ENV_BS} = True</msg>
-<var>${ENV_BS}</var>
-<arg>BROWSERSTACK</arg>
-<arg>default=${BROWSERSTACK}</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:19:55.848410" elapsed="0.000329"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Browser" owner="resources">
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:19:55.849804" level="INFO">${BS_USER} = thefinislumen_yWLp9u</msg>
-<var>${BS_USER}</var>
-<arg>BROWSERSTACK_USERNAME</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:19:55.849672" elapsed="0.000163"/>
-</kw>
-<kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-11-24T20:19:55.850071" level="INFO">${BS_KEY} = VGzPZp5JA4txt5F5DkXG</msg>
-<var>${BS_KEY}</var>
-<arg>BROWSERSTACK_ACCESS_KEY</arg>
-<doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-11-24T20:19:55.849945" elapsed="0.000155"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:19:55.850380" level="INFO">Length is 20.</msg>
-<arg>${BS_USER}</arg>
-<arg>BrowserStack username not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:19:55.850209" elapsed="0.000219"/>
-</kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2025-11-24T20:19:55.850656" level="INFO">Length is 20.</msg>
-<arg>${BS_KEY}</arg>
-<arg>BrowserStack access key not set</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2025-11-24T20:19:55.850528" elapsed="0.000174"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-24T20:19:55.850990" level="INFO">${REMOTE_URL} = https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub</msg>
-<var>${REMOTE_URL}</var>
-<arg>https://${BS_USER}:${BS_KEY}@hub-cloud.browserstack.com/wd/hub</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-24T20:19:55.850810" elapsed="0.000211"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open BrowserStack Edge" owner="resources">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-24T20:19:55.852368" level="INFO">${edge_options} = &lt;selenium.webdriver.edge.options.Options object at 0x106ad8e90&gt;</msg>
-<var>${edge_options}</var>
-<arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
-<arg>sys, selenium.webdriver</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-24T20:19:55.852005" elapsed="0.000393"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-11-24T20:19:55.853014" level="INFO">&amp;{bstack_options} = { os=Windows | osVersion=10 | browserVersion=latest | buildName=browserstack-build-1 | projectName=BrowserStack Sample | sessionName=Robot Framework Test | seleniumVersion=4.0.0 }</msg>
-<var>&amp;{bstack_options}</var>
-<arg>os=${os}</arg>
-<arg>osVersion=${os_version}</arg>
-<arg>browserVersion=${browser_version}</arg>
-<arg>buildName=browserstack-build-1</arg>
-<arg>projectName=BrowserStack Sample</arg>
-<arg>sessionName=Robot Framework Test</arg>
-<arg>seleniumVersion=4.0.0</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-11-24T20:19:55.852548" elapsed="0.000503"/>
-</kw>
-<kw name="Call Method" owner="BuiltIn">
-<arg>${edge_options}</arg>
-<arg>set_capability</arg>
-<arg>bstack:options</arg>
-<arg>${bstack_options}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-11-24T20:19:55.853182" elapsed="0.000160"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:19:55.853894" level="INFO">Opening browser 'Edge' to base url 'https://www.demoblaze.com/' through remote server at 'https://thefinislumen_yWLp9u:VGzPZp5JA4txt5F5DkXG@hub-cloud.browserstack.com/wd/hub'.</msg>
-<arg>${baseUrl}</arg>
-<arg>Edge</arg>
-<arg>remote_url=${remote_url}</arg>
-<arg>options=${edge_options}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-24T20:19:55.853533" elapsed="14.724327"/>
-</kw>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:19:55.851574" elapsed="14.727364"/>
-</kw>
-<arg>'${browser}'=='Chrome'</arg>
-<arg>Open BrowserStack Chrome</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Safari'</arg>
-<arg>Open BrowserStack Safari</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}'=='Edge'</arg>
-<arg>Open BrowserStack Edge</arg>
-<arg>${REMOTE_URL}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Fail</arg>
-<arg>Unsupported browser: ${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:19:55.851135" elapsed="14.728151"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:19:55.849310" elapsed="14.730151"/>
-</kw>
-<arg>'${ENV_BS}'=='True'</arg>
-<arg>Open BrowserStack Browser</arg>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<arg>ELSE</arg>
-<arg>Open Browser</arg>
-<arg>${baseUrl}</arg>
-<arg>${browser}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-24T20:19:55.848909" elapsed="14.730657"/>
-</kw>
-<arg>${browser}</arg>
-<arg>${os}</arg>
-<arg>${os_version}</arg>
-<arg>${browser_version}</arg>
-<status status="PASS" start="2025-11-24T20:19:55.847943" elapsed="14.731754"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${logInButton}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-11-24T20:20:10.580864" elapsed="0.290682"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T20:20:11.874414" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T20:20:10.872135" elapsed="1.002630"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T20:20:11.876024" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
-<msg time="2025-11-24T20:20:14.350906" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-24T20:20:14.351420" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff6003d9a65
-	0x7ff6003d9ac4
-	0x7ff60058b8a8
-	0x7ff600199c7c
-	0x7ff600198291
-	0x7ff6001961c9
-	0x7ff6001956c5
-	0x7ff60018b95e
-	0x7ff6001b3c8a
-	0x7ff60018b3d5
-	0x7ff60018b2ed
-	0x7ff60018b3d5
-	0x7ff6001ce6f2
-	0x7ff60018a8aa
-	0x7ff600189bd1
-	0x7ff60018a6d3
-	0x7ff6002465f4
-	0x7ff600242b17
-	0x7ff6004066c5
-	0x7ff6003f4b21
-	0x7ff6003fcfc9
-	0x7ff6003e0fb4
-	0x7ff6003e1103
-	0x7ff6003cee36
-	0x7ffbda877034
-	0x7ffbdbd42651
-</msg>
-<arg>${logInButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-11-24T20:20:11.875211" elapsed="2.478032">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff6003d9a65
-	0x7ff6003d9ac4
-	0x7ff60058b8a8
-	0x7ff600199c7c
-	0x7ff600198291
-	0x7ff6001961c9
-	0x7ff6001956c5
-	0x7ff60018b95e
-	0x7ff6001b3c8a
-	0x7ff60018b3d5
-	0x7ff60018b2ed
-	0x7ff60018b3d5
-	0x7ff6001ce6f2
-	0x7ff60018a8aa
-	0x7ff600189bd1
-	0x7ff60018a6d3
-	0x7ff6002465f4
-	0x7ff600242b17
-	0x7ff6004066c5
-	0x7ff6003f4b21
-	0x7ff6003fcfc9
-	0x7ff6003e0fb4
-	0x7ff6003e1103
-	0x7ff6003cee36
-	0x7ffbda877034
-	0x7ffbdbd42651
-</status>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${loginUsernameField}</arg>
-<arg>timeout=80</arg>
-<arg>error=logInButtonNotFound</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="NOT RUN" start="2025-11-24T20:20:14.353475" elapsed="0.000034"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:20:14.353593" elapsed="0.000022"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<arg>${loginUsernameField}</arg>
-<arg>${login}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:20:14.353707" elapsed="0.000021"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<arg>${loginPasswordField}</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:20:14.353831" elapsed="0.000027"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:20:14.353954" elapsed="0.000026"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>${logInFormButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T20:20:14.354086" elapsed="0.000027"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-11-24T20:20:14.354203" elapsed="0.000038"/>
-</kw>
-<arg>@{EDGE_CONFIG}</arg>
-<status status="FAIL" start="2025-11-24T20:19:55.847415" elapsed="18.507059">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff6003d9a65
-	0x7ff6003d9ac4
-	0x7ff60058b8a8
-	0x7ff600199c7c
-	0x7ff600198291
-	0x7ff6001961c9
-	0x7ff6001956c5
-	0x7ff60018b95e
-	0x7ff6001b3c8a
-	0x7ff60018b3d5
-	0x7ff60018b2ed
-	0x7ff60018b3d5
-	0x7ff6001ce6f2
-	0x7ff60018a8aa
-	0x7ff600189bd1
-	0x7ff60018a6d3
-	0x7ff6002465f4
-	0x7ff600242b17
-	0x7ff6004066c5
-	0x7ff6003f4b21
-	0x7ff6003fcfc9
-	0x7ff6003e0fb4
-	0x7ff6003e1103
-	0x7ff6003cee36
-	0x7ffbda877034
-	0x7ffbdbd42651
-</status>
-</kw>
-<kw name="Add to Cart" owner="resources">
-<status status="NOT RUN" start="2025-11-24T20:20:14.354960" elapsed="0.000053"/>
-</kw>
-<kw name="Close Browser" owner="resources">
-<status status="NOT RUN" start="2025-11-24T20:20:14.355161" elapsed="0.000031"/>
-</kw>
 <tag>edge</tag>
-<status status="FAIL" start="2025-11-24T20:19:55.846640" elapsed="18.508836">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;...&lt;/a&gt; is not clickable at point (300, 86). Other element would receive the click: &lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;
-  (Session info: MicrosoftEdge=142.0.3595.53); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	0x7ff6003d9a65
-	0x7ff6003d9ac4
-	0x7ff60058b8a8
-	0x7ff600199c7c
-	0x7ff600198291
-	0x7ff6001961c9
-	0x7ff6001956c5
-	0x7ff60018b95e
-	0x7ff6001b3c8a
-	0x7ff60018b3d5
-	0x7ff60018b2ed
-	0x7ff60018b3d5
-	0x7ff6001ce6f2
-	0x7ff60018a8aa
-	0x7ff600189bd1
-	0x7ff60018a6d3
-	0x7ff6002465f4
-	0x7ff600242b17
-	0x7ff6004066c5
-	0x7ff6003f4b21
-	0x7ff6003fcfc9
-	0x7ff6003e0fb4
-	0x7ff6003e1103
-	0x7ff6003cee36
-	0x7ffbda877034
-	0x7ffbdbd42651
-</status>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-11-24T21:00:20.182402" elapsed="0.002870">Test execution stopped due to a fatal error.</status>
 </test>
 <kw name="Close Browser" owner="resources" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-11-24T20:20:14.357184" elapsed="1.304413"/>
+<status status="PASS" start="2025-11-24T21:00:20.186262" elapsed="0.000131"/>
 </kw>
-<status status="PASS" start="2025-11-24T20:20:14.356877" elapsed="1.304987"/>
+<status status="PASS" start="2025-11-24T21:00:20.186061" elapsed="0.000392"/>
 </kw>
-<status status="FAIL" start="2025-11-24T20:15:16.852975" elapsed="298.808951"/>
+<status status="FAIL" start="2025-11-24T20:59:01.177899" elapsed="79.008587"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="8" skip="0">All Tests</stat>
+<stat pass="3" fail="9" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="4" skip="0">chrome</stat>
-<stat pass="0" fail="4" skip="0">edge</stat>
-<stat pass="4" fail="0" skip="0">safari</stat>
+<stat info="combined" combined="NOT robot:exit" pass="3" fail="1" skip="0">NOT robot:exit</stat>
+<stat pass="1" fail="3" skip="0">chrome</stat>
+<stat pass="1" fail="3" skip="0">edge</stat>
+<stat pass="1" fail="3" skip="0">safari</stat>
 </tag>
 <suite>
-<stat name="Test Browserstack" id="s1" pass="4" fail="8" skip="0">Test Browserstack</stat>
+<stat name="Test Browserstack" id="s1" pass="3" fail="9" skip="0">Test Browserstack</stat>
 </suite>
 </statistics>
 <errors>
